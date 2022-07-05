@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  overflow-x: hidden;
 }
 
 :root {
@@ -91,7 +92,7 @@ p {
 .App::after {
   content: '';
   background: url('./assets/body-bg.svg') no-repeat;
-  right: 0;
+  right: -1rem;
   top: 12.5rem;
   background-size: 100%;
   width: 24vw;
@@ -124,14 +125,23 @@ p {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
+  transition: background 0.3s;
 }
 
 .header__home {
   background: url('./assets/home.svg') no-repeat center;
 }
 
+.header__home:hover {
+  background: url('./assets/home-hover.svg') no-repeat center;
+}
+
 .header__message {
   background: url('./assets/messages.svg') no-repeat center;
+}
+
+.header__message:hover {
+  background: url('./assets/messages-hover.svg') no-repeat center;
 }
 
 /* Button */
@@ -140,13 +150,13 @@ button {
   background: var(--coral);
   padding: 0.5rem;
   border-radius: 6px;
-  font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   color: var(--white);
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
   transition: 0.3s background;
+  cursor: pointer;
 }
 
 button:hover {
@@ -170,4 +180,15 @@ button:hover {
   bottom: 5.25rem;
   left: 45%;
   transform: translateX(-50%);
+}
+
+.footer a {
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  transition: 0.3s color;
+}
+
+.footer a:hover {
+  color: var(--coral);
 }
