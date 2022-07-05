@@ -1,0 +1,63 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding-top: 5.5rem;
+}
+
+.register::after {
+  content: '';
+  transform: scaleX(-1);
+  background: url('../assets/body-bg.svg') no-repeat;
+  left: 0;
+  top: 23rem;
+  background-size: 100%;
+  width: 24vw;
+  height: 120vw;
+  max-width: 8.375rem;
+  position: absolute;
+}
+
+.register::before {
+  content: '';
+  background: url('../assets/paws.png') no-repeat;
+  right: 0;
+  top: 0;
+  background-size: 100%;
+  width: 135px;
+  height: 227px;
+  max-width: 8.375rem;
+  position: absolute;
+}
+
+.register img {
+  height: 2.25rem;
+}
+
+.register p {
+  width: 19.5rem;
+  text-align: center;
+  color: var(--blue);
+  margin-top: 1.5rem;
+}
+
+.register form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.register label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--dark-grey);
+}
+
+.register input {
+  display: block;
+}
