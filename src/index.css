@@ -14,7 +14,7 @@
   --poppins: 'Poppins', sans-serif;
   --ibm: 'IBM Plex Sans', sans-serif;
   /* colors */
-  --blue: hsl(222, 100%, 61%);
+  --blue: #3874ff;
   --green: hsl(165, 66%, 53%);
   --coral: hsl(360, 96%, 71%);
   --btn-hover: hsl(359, 100%, 81%);
@@ -86,18 +86,6 @@ p {
   width: 100vw;
   height: 84vw;
   max-width: 35rem;
-  position: absolute;
-}
-
-.App::after {
-  content: '';
-  background: url('./assets/body-bg.svg') no-repeat;
-  right: -1rem;
-  top: 12.5rem;
-  background-size: 100%;
-  width: 24vw;
-  height: 120vw;
-  max-width: 8.375rem;
   position: absolute;
 }
 

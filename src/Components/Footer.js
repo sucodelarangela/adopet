@@ -1,7 +1,12 @@
+// dependencies
+import { useLocation } from "react-router-dom";
+
 const Footer = () => {
+  const location = useLocation();
+  console.log(location.pathname);
   return (
     <>
-      <img className="footer__img" src="pets.svg" alt="" aria-hidden='true' />
+      {location.pathname === '/' && <img className="footer__img" src="pets.svg" alt="" aria-hidden='true' />}
       <footer className="footer">
         <p>2022 - Desenvolvido por <a href="https://angelacaldas.vercel.app/" target='_blank' rel="noreferrer">Angela Caldas</a>.</p>
       </footer>

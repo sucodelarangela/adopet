@@ -1,12 +1,8 @@
-body {
-  background: var(--blue);
-}
-
 .home {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 82vh;
+  height: 100vh;
   padding-top: 6.25rem;
 }
 
@@ -33,4 +29,16 @@ body {
   padding: 1.5rem;
   gap: 1rem;
   max-width: 180px;
+}
+
+.home::after {
+  content: '';
+  background: url('../assets/body-bg.svg') no-repeat;
+  right: -1rem;
+  top: 12.5rem;
+  background-size: 100%;
+  width: 24vw;
+  height: 120vw;
+  max-width: 8.375rem;
+  position: absolute;
 }
