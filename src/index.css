@@ -1,13 +1,116 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  border: 0;
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  text-decoration: none;
+}
+
+:root {
+  /* fonts */
+  --poppins: 'Poppins', sans-serif;
+  --ibm: 'IBM Plex Sans', sans-serif;
+  /* colors */
+  --blue: hsl(222, 100%, 61%);
+  --green: hsl(165, 66%, 53%);
+  --coral: hsl(360, 96%, 71%);
+  --beige: hsl(31, 81%, 94%);
+  --dark-grey: hsl(240, 5%, 48%);
+  --medium-grey: hsl(0, 0%, 74%);
+  --light-grey: hsl(0, 0%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: var(--poppins);
+  background: var(--white);
+  height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  scroll-behavior: smooth;
+}
+
+/* App */
+.App {
+  position: relative;
+}
+
+.App::before {
+  content: '';
+  background: url('./assets/header-bg.svg') no-repeat;
+  background-position: left top;
+  background-size: 100%;
+  width: 100vw;
+  height: 84vw;
+  max-width: 35rem;
+  position: absolute;
+}
+
+.App::after {
+  content: '';
+  background: url('./assets/body-bg.svg') no-repeat;
+  right: 0;
+  top: 12.5rem;
+  background-size: 100%;
+  width: 24vw;
+  height: 120vw;
+  max-width: 8.375rem;
+  position: absolute;
+}
+
+/* Header */
+.header {
+  padding: 3rem;
+  position: relative;
+}
+
+.header nav {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 3.75rem;
+}
+
+.header__logo {
+  display: none;
+  width: 8rem;
+}
+
+.header__home,
+.header__message {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.header__home {
+  background: url('./assets/home.svg') no-repeat center;
+}
+
+.header__message {
+  background: url('./assets/messages.svg') no-repeat center;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 0;
+  background: var(--green);
+  color: var(--white);
+  font-size: 1rem;
+  position: relative;
+}
+
+.footer__img {
+  position: absolute;
+  bottom: 5.25rem;
+  left: 45%;
+  transform: translateX(-50%);
 }
