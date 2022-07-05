@@ -16,6 +16,7 @@
   --blue: hsl(222, 100%, 61%);
   --green: hsl(165, 66%, 53%);
   --coral: hsl(360, 96%, 71%);
+  --btn-hover: hsl(359, 100%, 81%);
   --beige: hsl(31, 81%, 94%);
   --dark-grey: hsl(240, 5%, 48%);
   --medium-grey: hsl(0, 0%, 74%);
@@ -33,6 +34,42 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4.25rem;
+  line-height: 4.5rem;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.625rem;
+  line-height: 3rem;
+}
+
+h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.625rem;
+  line-height: 3rem;
+}
+
+h4 {
+  font-family: var(--ibm);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 /* App */
@@ -66,6 +103,7 @@ html {
 /* Header */
 .header {
   padding: 3rem;
+  padding-bottom: 0;
   position: relative;
 }
 
@@ -94,6 +132,25 @@ html {
 
 .header__message {
   background: url('./assets/messages.svg') no-repeat center;
+}
+
+/* Button */
+button {
+  width: 50vw;
+  background: var(--coral);
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--white);
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+  transition: 0.3s background;
+}
+
+button:hover {
+  background: var(--btn-hover);
 }
 
 /* Footer */

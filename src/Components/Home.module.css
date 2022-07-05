@@ -1,4 +1,35 @@
-div {
-  height: 100vh;
+body {
   background: var(--blue);
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 82vh;
+  padding-top: 6.25rem;
+}
+
+.home img {
+  height: 2.875rem;
+}
+
+.home h3 {
+  font-family: var(--ibm);
+  color: var(--white);
+}
+
+.home p {
+  width: 15.5rem;
+  text-align: center;
+  color: var(--white);
+  margin-top: 1rem;
+}
+
+.home__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 1rem;
 }
