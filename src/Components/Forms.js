@@ -2,7 +2,7 @@
 import styles from './Forms.module.css';
 
 // dependencies
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 // components
 import Button from './Button.js';
@@ -27,7 +27,9 @@ const Register = () => {
               <input id='pass-create' type="password" placeholder='Crie uma senha' />
               <label htmlFor='pass-confirm'>Confirme sua senha</label>
               <input id='pass-confirm' type="password" placeholder='Crie uma senha' />
-              <Button children='Cadastrar' />
+              <Link to='/login'>
+                <Button children='Cadastrar' />
+              </Link>
             </form>
           </>
         ) : (
@@ -38,7 +40,9 @@ const Register = () => {
               <input id='email' type="email" placeholder='Insira seu email' />
               <label htmlFor='pass'>Senha</label>
               <input id='pass' type="password" placeholder='Insira sua senha' />
-              <Button children='Entrar' />
+              <Link to='/home'>
+                <Button children='Entrar' />
+              </Link>
             </form>
           </>
         )
