@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 82vh;
   padding-top: 6.25rem;
 }
 
@@ -28,7 +28,8 @@
   align-items: center;
   padding: 1.5rem;
   gap: 1rem;
-  max-width: 180px;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 .home::after {
