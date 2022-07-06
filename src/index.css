@@ -98,6 +98,11 @@ p {
 
 .header nav {
   display: flex;
+  justify-content: space-between;
+}
+
+.header nav > div {
+  display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 3.75rem;
