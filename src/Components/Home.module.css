@@ -1,3 +1,4 @@
+/* #region ----------------- FORMS COMPONENT */
 .register,
 .home {
   display: flex;
@@ -39,8 +40,7 @@
   height: 2.25rem;
 }
 
-.register p,
-.home p {
+.register p {
   width: 19.5rem;
   text-align: center;
   color: var(--blue);
@@ -121,4 +121,98 @@
   font-size: 1rem;
   line-height: 1rem;
   color: var(--medium-grey);
+}
+
+/* #endregion */
+
+/* #region ----------------- HOME COMPONENT */
+.home {
+  margin: 0;
+}
+
+.cards {
+  gap: 2rem;
+}
+
+.home p {
+  display: block;
+  margin: 0 auto;
+  width: 15rem;
+  text-align: center;
+  color: var(--blue);
+  margin-bottom: 1.5rem;
+}
+
+div.card {
+  display: grid;
+  grid-template-columns: 10.25rem auto;
+  grid-template-areas:
+    'photo name'
+    'photo list'
+    'photo city'
+    'photo contact';
+  width: 100vw;
+  background: var(--light-grey);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card img {
+  grid-area: photo;
+  margin-right: 1rem;
+}
+
+.card h4 {
+  color: var(--blue);
+  font-family: var(--poppins);
+  grid-area: name;
+}
+
+.card ul {
+  display: grid;
+  grid-area: list;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--dark-grey);
+  margin-bottom: 1.875rem;
+}
+
+p.card__city,
+p.card__contact {
+  color: var(--dark-grey);
+  font-weight: 400;
+  text-align: start;
+  width: auto;
+}
+
+p.card__city {
+  grid-area: city;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+a.card__contact {
+  grid-area: contact;
+  font-weight: 400;
+  font-size: 0.625rem;
+  line-height: 1rem;
+  margin: 0;
+  color: var(--dark-grey);
+  display: flex;
+}
+
+a.card__contact::before {
+  content: '';
+  background: url('../assets/message.svg') no-repeat;
+  padding-right: 0.5rem;
+  width: 18px;
+  height: 18px;
+  transition: 0.3s;
+}
+
+a.card__contact:hover::before {
+  background: url('../assets/message-hover.svg') no-repeat;
 }
