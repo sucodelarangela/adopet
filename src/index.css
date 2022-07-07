@@ -28,9 +28,14 @@
 body {
   font-family: var(--poppins);
   background: var(--white);
-  height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+#root,
+main {
+  height: 100vh;
 }
 
 html {
@@ -76,6 +81,7 @@ p {
 /* App */
 .App {
   position: relative;
+  flex-grow: 1;
 }
 
 .App::before {
