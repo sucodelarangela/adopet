@@ -69,13 +69,45 @@
   margin: 0;
 }
 
+.register span {
+  width: 100%;
+}
+
 .register input {
   display: inline-block;
   padding: 0.8rem;
-  background: var(--light-grey);
+  background-color: var(--light-grey);
   border-radius: 6px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
   width: 100%;
+  position: relative;
+}
+
+.register .img {
+  width: 18px;
+  height: 16px;
+  position: absolute;
+  margin-top: 14px;
+  right: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register .pass__view {
+  width: 18px;
+  height: 16px;
+  background: url('../assets/eye.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-top: 14px;
+  right: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.pass__view:hover {
+  background: url('../assets/eye-hover.svg');
 }
 
 .register button {

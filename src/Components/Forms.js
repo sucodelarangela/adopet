@@ -1,4 +1,4 @@
-// styles
+// styles and assets
 import styles from './Home.module.css';
 
 // dependencies
@@ -24,9 +24,15 @@ const Register = () => {
               <label htmlFor='name'>Nome</label>
               <input id='name' type="text" placeholder='Digite seu nome completo' />
               <label htmlFor='pass-create'>Senha</label>
-              <input id='pass-create' type="password" placeholder='Crie uma senha' />
+              <span>
+                <input id='pass-create' type="password" placeholder='Crie uma senha' />
+                <span className={styles.pass__view} href=''></span>
+              </span>
               <label htmlFor='pass-confirm'>Confirme sua senha</label>
-              <input id='pass-confirm' type="password" placeholder='Crie uma senha' />
+              <span>
+                <input id='pass-confirm' type="password" placeholder='Crie uma senha' />
+                <span className={styles.pass__view} href=''></span>
+              </span>
               <Link to='/login'>
                 <Button children='Cadastrar' />
               </Link>
@@ -40,6 +46,7 @@ const Register = () => {
               <input id='email' type="email" placeholder='Insira seu email' />
               <label htmlFor='pass'>Senha</label>
               <input id='pass' type="password" placeholder='Insira sua senha' />
+              <span></span>
               <Link to='/home'>
                 <Button children='Entrar' />
               </Link>
