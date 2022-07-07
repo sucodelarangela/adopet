@@ -1,5 +1,5 @@
 // styles
-import styles from './Forms.module.css';
+import styles from './Home.module.css';
 
 // dependencies
 import { Link, useLocation } from 'react-router-dom';

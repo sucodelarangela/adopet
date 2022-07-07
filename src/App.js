@@ -6,6 +6,7 @@ import Initial from './Components/Initial.js';
 import Header from "./Components/Header.js";
 import Footer from "./Components/Footer.js";
 import Forms from "./Components/Forms.js";
+import Home from "./Components/Home.js";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Route exact path='/' element={<Initial />} />
           <Route path='/login' element={<Forms />} />
           <Route path='/cadastro' element={<Forms />} />
-          {/* <Route path='/home' element={<Home />} /> */}
+          <Route path='/home' element={<Home />} />
         </Routes>
         <Footer />
       </main>
