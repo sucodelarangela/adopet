@@ -23,7 +23,7 @@ const Header = () => {
         <div>
           <img className='header__logo' src="logo-clear.svg" alt="Logo AdoPet" />
           <Link className='header__home' to="/" aria-label='Ir para Home'></Link>
-          <Link className='header__message' to="/" aria-label='Ir para Mensagens'></Link>
+          <Link className='header__message' to="/mensagem" aria-label='Ir para Mensagens'></Link>
         </div>
         {user}
       </nav>

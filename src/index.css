@@ -1,3 +1,4 @@
+/* #region ----------------- GLOBAL */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;500;600&display=swap');
 
 * {
@@ -77,8 +78,9 @@ p {
   font-size: 1rem;
   line-height: 1.5rem;
 }
+/* #endregion */
 
-/* App */
+/* #region ----------------- APP COMPONENT */
 .App {
   position: relative;
   flex-grow: 1;
@@ -94,8 +96,9 @@ p {
   max-width: 35rem;
   position: absolute;
 }
+/* #endregion */
 
-/* Header */
+/* #region ----------------- HEADER COMPONENT */
 .header {
   padding: 3rem;
   padding-bottom: 0;
@@ -142,8 +145,9 @@ p {
 .header__message:hover {
   background: url('./assets/messages-hover.svg') no-repeat center;
 }
+/* #endregion */
 
-/* Button */
+/* #region ----------------- BUTTON COMPONENT */
 button {
   width: 50vw;
   background: var(--coral);
@@ -161,8 +165,9 @@ button {
 button:hover {
   background: var(--btn-hover);
 }
+/* #endregion */
 
-/* Footer */
+/* #region ----------------- FOOTER COMPONENT */
 .footer {
   display: flex;
   align-items: center;
@@ -183,11 +188,13 @@ button:hover {
 
 .footer a {
   color: var(--white);
-  text-decoration: underline;
-  text-underline-offset: 6px;
+  border-bottom: 1px solid;
+  /* text-decoration: underline;
+  text-underline-offset: 6px; */
   transition: 0.3s color;
 }
 
 .footer a:hover {
   color: var(--coral);
 }
+/* #endregion */
