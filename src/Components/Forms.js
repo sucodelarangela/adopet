@@ -6,9 +6,24 @@ import { Link, useLocation } from 'react-router-dom';
 
 // components
 import Button from './Button.js';
+import { useEffect } from 'react';
 
 const Register = () => {
   const location = useLocation();
+  let element = '';
+
+  const changeType = (id) => {
+    element = document.querySelector(id);
+
+    if (element.type === 'password') {
+      element.setAttribute('type', 'text');
+    } else {
+      element.setAttribute('type', 'password');
+    }
+  };
+
+  useEffect(() => {
+  }, [element]);
 
   return (
     <section className={styles.register}>
@@ -25,13 +40,13 @@ const Register = () => {
               <input id='name' type="text" placeholder='Digite seu nome completo' />
               <label htmlFor='pass-create'>Senha</label>
               <span>
-                <input id='pass-create' type="password" placeholder='Crie uma senha' />
-                <span className={styles.pass__view} href=''></span>
+                <input id='pass-create' type='password' placeholder='Crie uma senha' />
+                <span onClick={() => changeType('#pass-create')} className={styles.pass__view}></span>
               </span>
               <label htmlFor='pass-confirm'>Confirme sua senha</label>
               <span>
-                <input id='pass-confirm' type="password" placeholder='Crie uma senha' />
-                <span className={styles.pass__view} href=''></span>
+                <input id='pass-confirm' type='password' placeholder='Crie uma senha' />
+                <span onClick={() => changeType('#pass-confirm')} className={styles.pass__view}></span>
               </span>
               <Link to='/login'>
                 <Button children='Cadastrar' />
