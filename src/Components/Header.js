@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 // assets
 import userPic from '../assets/user.svg';
+import loggedUser from '../assets/logged-user.png';
 
 const Header = () => {
   const location = useLocation();
@@ -12,8 +13,10 @@ const Header = () => {
   useEffect(() => {
     if (location.pathname === '/' || location.pathname === '/login' || location.pathname === '/cadastro') {
       setUser('');
+    } else if (location.pathname === '/perfil') {
+      setUser(<img className='header__user' src={loggedUser} alt="Usuário" />);
     } else {
-      setUser(<img className='header__user' src={userPic} alt="Usuário" />);
+      setUser(<Link to='/perfil'><img className='header__user' src={userPic} alt="Usuário" /></Link>);
     }
   }, [location]);
 

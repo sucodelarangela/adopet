@@ -114,12 +114,19 @@
   background: url('../assets/eye-hover.svg');
 }
 
-.register a {
+.register a,
+.message a {
   color: var(--coral);
+  text-align: center;
   margin-top: 0.875rem;
   font-size: 0.75rem;
   text-decoration: underline;
   cursor: pointer;
+  display: block;
+}
+
+.message a {
+  margin-top: 0.25rem;
 }
 
 .register button {
@@ -151,7 +158,7 @@
 .message p {
   display: block;
   margin: 0 auto;
-  width: 15rem;
+  width: 16rem;
   text-align: center;
   color: var(--blue);
   margin-bottom: 1.5rem;
@@ -250,6 +257,10 @@ a.card__contact:hover::before {
   background-color: var(--white);
 }
 
+.message ::placeholder {
+  text-align: start;
+}
+
 .message textarea {
   margin-bottom: 2rem;
 }
@@ -259,4 +270,24 @@ a.card__contact:hover::before {
   margin: 0 auto;
 }
 
+/* #endregion */
+
+/* #region ----------------- PROFILE COMPONENT */
+legend {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: var(--dark-grey);
+}
+
+#userPic {
+  display: block;
+  margin: 0 auto;
+  max-width: 5rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
 /* #endregion */

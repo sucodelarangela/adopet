@@ -33,6 +33,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+input,
+textarea {
+  font-family: var(--poppins);
+  color: var(--dark-grey);
+}
+
 body,
 #root,
 main {
@@ -102,6 +108,10 @@ p {
   padding: 3rem;
   padding-bottom: 0;
   position: relative;
+}
+
+.header__user {
+  max-width: 2.5rem;
 }
 
 .header nav {
@@ -181,7 +191,7 @@ button:hover {
 .footer__img {
   position: absolute;
   bottom: 5rem;
-  left: 45%;
+  left: 50%;
   transform: translateX(-50%);
   z-index: -1;
 }

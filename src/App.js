@@ -20,6 +20,7 @@ function App() {
           <Route path='/cadastro' element={<Forms />} />
           <Route path='/home' element={<Home />} />
           <Route path='/mensagem' element={<Message />} />
+          <Route path='/perfil' element={<Message />} />
         </Routes>
         <Footer />
       </main>
