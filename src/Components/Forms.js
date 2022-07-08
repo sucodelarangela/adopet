@@ -60,8 +60,11 @@ const Register = () => {
               <label htmlFor='email'>E-mail</label>
               <input id='email' type="email" placeholder='Insira seu email' />
               <label htmlFor='pass'>Senha</label>
-              <input id='pass' type="password" placeholder='Insira sua senha' />
-              <span></span>
+              <span>
+                <input id='pass' type='password' placeholder='Insire sua senha' />
+                <span onClick={() => changeType('#pass')} className={styles.pass__view}></span>
+              </span>
+              <a href="#">Esqueci minha senha</a>
               <Link to='/home'>
                 <Button children='Entrar' />
               </Link>
