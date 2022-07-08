@@ -91,9 +91,8 @@ p {
   background: url('./assets/header-bg.svg') no-repeat;
   background-position: left top;
   background-size: 100%;
-  width: 100vw;
-  height: 84vw;
-  max-width: 35rem;
+  width: 22rem;
+  height: 18.5rem;
   position: absolute;
 }
 /* #endregion */

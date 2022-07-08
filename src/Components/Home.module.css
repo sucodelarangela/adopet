@@ -18,9 +18,8 @@
   left: 0;
   top: 23rem;
   background-size: 100%;
-  width: 24vw;
-  height: 120vw;
-  max-width: 8.375rem;
+  width: 5.25rem;
+  height: 26rem;
   position: absolute;
   z-index: -1;
 }
@@ -131,7 +130,7 @@
   text-align: center;
   font-style: normal;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1rem;
   color: var(--medium-grey);
   font-family: var(--poppins);
@@ -178,7 +177,9 @@ div.card {
   margin-right: 1rem;
 }
 
-.card h4 {
+.card h4,
+.message label {
+  font-weight: 600;
   color: var(--blue);
   font-family: var(--poppins);
   grid-area: name;
@@ -236,8 +237,26 @@ a.card__contact:hover::before {
 /* #endregion */
 
 /* #region ----------------- MESSAGE COMPONENT */
+.message form {
+  background: var(--light-grey);
+  padding: 2rem 1rem;
+  border-radius: 0.625rem;
+}
+
+.message input,
 .message textarea {
-  margin-bottom: 2px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: var(--white);
+}
+
+.message textarea {
+  margin-bottom: 2rem;
+}
+
+.message form > button {
+  display: block;
+  margin: 0 auto;
 }
 
 /* #endregion */
