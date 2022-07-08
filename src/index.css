@@ -180,9 +180,10 @@ button:hover {
 
 .footer__img {
   position: absolute;
-  bottom: -6.5rem;
+  bottom: 5rem;
   left: 45%;
   transform: translateX(-50%);
+  z-index: -1;
 }
 
 .footer a {

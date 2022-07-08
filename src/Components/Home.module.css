@@ -160,6 +160,7 @@
 div.card {
   display: grid;
   justify-content: center;
+  align-items: center;
   grid-template-columns: 10.25rem auto;
   grid-template-areas:
     'photo name'
@@ -186,7 +187,6 @@ div.card {
 }
 
 .card ul {
-  display: grid;
   grid-area: list;
   font-weight: 400;
   font-size: 0.875rem;
