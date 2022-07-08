@@ -36,7 +36,7 @@ body {
 body,
 #root,
 main {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 html {
@@ -181,7 +181,7 @@ button:hover {
 
 .footer__img {
   position: absolute;
-  bottom: 5.25rem;
+  bottom: -6.5rem;
   left: 45%;
   transform: translateX(-50%);
 }
