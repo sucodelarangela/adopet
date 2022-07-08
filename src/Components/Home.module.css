@@ -160,6 +160,7 @@
 
 div.card {
   display: grid;
+  justify-content: center;
   grid-template-columns: 10.25rem auto;
   grid-template-areas:
     'photo name'
