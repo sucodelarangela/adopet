@@ -1,6 +1,5 @@
 // styles
 import Button from './Button';
-import styles from './Home.module.css';
 
 // dependencies
 import { useLocation } from 'react-router-dom';
@@ -12,7 +11,7 @@ const Message = () => {
   const location = useLocation();
 
   return (
-    <section className={styles.message}>
+    <section className='message'>
       {
         location.pathname === '/mensagem' ? (
           <>
@@ -35,7 +34,7 @@ const Message = () => {
             <form>
               <legend>Perfil</legend>
               <label htmlFor='user-pic'>Foto</label>
-              <input type="image" id={styles.userPic} src={loggedUser} alt="Usuário logado" />
+              <input type="image" id='userPic' src={loggedUser} alt="Usuário logado" />
               <a href="#">Clique na foto para editar</a>
               <label htmlFor="name">Nome</label>
               <input type="text" id='name' placeholder='Insira seu nome completo' value='Joana Magalhães' />

@@ -165,10 +165,11 @@ button {
   font-size: 16px;
   line-height: 24px;
   color: var(--white);
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   transition: 0.3s background;
   border-radius: 6px;
   cursor: pointer;
+  margin: 0 4px 4px;
 }
 
 button:hover {
@@ -206,5 +207,346 @@ button:hover {
 
 .footer a:hover {
   color: var(--coral);
+}
+/* #endregion */
+
+/* #region ----------------- INITIAL COMPONENT */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 6.25rem;
+}
+
+.home img {
+  height: 2.875rem;
+}
+
+.home h3 {
+  font-family: var(--ibm);
+  color: var(--white);
+}
+
+.home p {
+  width: 15.5rem;
+  text-align: center;
+  color: var(--white);
+  margin-top: 1rem;
+}
+
+.home__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 1rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.home::after {
+  content: '';
+  background: url('./assets/body-bg.svg') no-repeat;
+  right: -1rem;
+  top: 12.5rem;
+  background-size: 100%;
+  width: 5.25rem;
+  height: 26rem;
+  position: absolute;
+}
+/* #endregion */
+
+/* #region ----------------- FORMS COMPONENT */
+.register,
+.home,
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 5.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.register::after {
+  content: '';
+  transform: scaleX(-1);
+  background: url('./assets/body-bg.svg') no-repeat;
+  left: 0;
+  top: 23rem;
+  background-size: 100%;
+  width: 5.25rem;
+  height: 26rem;
+  position: absolute;
+  z-index: -1;
+}
+
+.register::before {
+  content: '';
+  background: url('./assets/paws.png') no-repeat;
+  right: 0;
+  top: 0;
+  background-size: 100%;
+  width: 135px;
+  height: 227px;
+  max-width: 8.375rem;
+  position: absolute;
+}
+
+.register img {
+  height: 2.25rem;
+}
+
+.register p {
+  width: 19.5rem;
+  text-align: center;
+  color: var(--blue);
+  margin-top: 1.5rem;
+}
+
+.register form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem;
+  width: 100%;
+}
+
+.register label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--dark-grey);
+  margin-top: 1.25rem;
+}
+
+.register label:first-child {
+  margin: 0;
+}
+
+.register span {
+  width: 100%;
+}
+
+.register input,
+.message input,
+.message textarea {
+  display: inline-block;
+  padding: 0.8rem;
+  margin-bottom: 2px;
+  background-color: var(--light-grey);
+  border-radius: 6px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  position: relative;
+  resize: none;
+}
+
+.register .img {
+  width: 18px;
+  height: 16px;
+  position: absolute;
+  margin-top: 14px;
+  right: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register .pass__view {
+  width: 18px;
+  height: 16px;
+  background: url('./assets/eye.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-top: 14px;
+  right: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.pass__view:hover {
+  background: url('./assets/eye-hover.svg');
+}
+
+.register a,
+.message a {
+  color: var(--coral);
+  text-align: center;
+  margin-top: 0.875rem;
+  font-size: 0.75rem;
+  text-decoration: underline;
+  cursor: pointer;
+  display: block;
+}
+
+.message a {
+  margin-top: 0.25rem;
+}
+
+.register button {
+  margin-top: 1.5rem;
+}
+
+::placeholder {
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: var(--medium-grey);
+  font-family: var(--poppins);
+}
+
+/* #endregion */
+
+/* #region ----------------- HOME COMPONENT */
+.home {
+  margin: 0;
+}
+
+.cards {
+  gap: 2rem;
+}
+
+.home p,
+.message p {
+  display: block;
+  margin: 0 auto;
+  width: 16rem;
+  text-align: center;
+  color: var(--blue);
+  margin-bottom: 1.5rem;
+}
+
+div.card {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 10.25rem auto;
+  grid-template-areas:
+    'photo name'
+    'photo list'
+    'photo city'
+    'photo contact';
+  width: 100vw;
+  background: var(--light-grey);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card img {
+  grid-area: photo;
+  margin-right: 1rem;
+}
+
+.card h4,
+.message label {
+  font-weight: 600;
+  color: var(--blue);
+  font-family: var(--poppins);
+  grid-area: name;
+}
+
+.card ul {
+  grid-area: list;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--dark-grey);
+  margin-bottom: 1.875rem;
+}
+
+p.card__city,
+p.card__contact {
+  color: var(--dark-grey);
+  font-weight: 400;
+  text-align: start;
+  width: auto;
+}
+
+p.card__city {
+  grid-area: city;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+a.card__contact {
+  grid-area: contact;
+  font-weight: 400;
+  font-size: 0.625rem;
+  line-height: 1rem;
+  margin: 0;
+  color: var(--dark-grey);
+  display: flex;
+}
+
+a.card__contact::before {
+  content: '';
+  background: url('./assets/message.svg') no-repeat;
+  padding-right: 0.5rem;
+  width: 18px;
+  height: 18px;
+  transition: 0.3s;
+}
+
+a.card__contact:hover::before {
+  background: url('./assets/message-hover.svg') no-repeat;
+}
+
+/* #endregion */
+
+/* #region ----------------- MESSAGE COMPONENT */
+.message form {
+  background: var(--light-grey);
+  padding: 2rem 1rem;
+  border-radius: 0.625rem;
+}
+
+.message input,
+.message textarea {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: var(--white);
+}
+
+.message ::placeholder {
+  text-align: start;
+}
+
+.message textarea {
+  margin-bottom: 2rem;
+}
+
+.message form > button {
+  display: block;
+  margin: 0 auto;
+}
+
+/* #endregion */
+
+/* #region ----------------- PROFILE COMPONENT */
+legend {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: var(--dark-grey);
+}
+
+#userPic {
+  display: block;
+  margin: 0 auto;
+  max-width: 5rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 /* #endregion */

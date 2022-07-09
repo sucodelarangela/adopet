@@ -1,6 +1,3 @@
-// styles and assets
-import styles from './Home.module.css';
-
 // dependencies
 import { Link, useLocation } from 'react-router-dom';
 
@@ -26,7 +23,7 @@ const Register = () => {
   }, [element]);
 
   return (
-    <section className={styles.register}>
+    <section className='register'>
       <img src="logo-blue.svg" alt="" />
       {
         location.pathname === '/cadastro' ? (
@@ -41,12 +38,12 @@ const Register = () => {
               <label htmlFor='pass-create'>Senha</label>
               <span>
                 <input id='pass-create' type='password' placeholder='Crie uma senha' />
-                <span onClick={() => changeType('#pass-create')} className={styles.pass__view}></span>
+                <span onClick={() => changeType('#pass-create')} className='pass__view'></span>
               </span>
               <label htmlFor='pass-confirm'>Confirme sua senha</label>
               <span>
                 <input id='pass-confirm' type='password' placeholder='Crie uma senha' />
-                <span onClick={() => changeType('#pass-confirm')} className={styles.pass__view}></span>
+                <span onClick={() => changeType('#pass-confirm')} className='pass__view'></span>
               </span>
               <Link to='/login'>
                 <Button children='Cadastrar' />
@@ -62,7 +59,7 @@ const Register = () => {
               <label htmlFor='pass'>Senha</label>
               <span>
                 <input id='pass' type='password' placeholder='Insira sua senha' />
-                <span onClick={() => changeType('#pass')} className={styles.pass__view}></span>
+                <span onClick={() => changeType('#pass')} className='pass__view'></span>
               </span>
               <a href="#">Esqueci minha senha</a>
               <Link to='/home'>
