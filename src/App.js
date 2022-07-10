@@ -2,12 +2,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // components
-import Initial from './components/Initial.js';
-import Header from "./components/Header.js";
-import Footer from "./components/Footer.js";
-import Forms from "./components/Forms.js";
-import Home from "./components/Home.js";
-import Message from "./components/Message.js";
+import Initial from './Components/Initial.js';
+import Header from "./Components/Header.js";
+import Footer from "./Components/Footer.js";
+import Forms from "./Components/Forms.js";
+import Home from "./Components/Home.js";
+import Message from "./Components/Message.js";
 
 function App() {
   return (
