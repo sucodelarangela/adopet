@@ -28,8 +28,7 @@ const Register = () => {
       {
         location.pathname === '/cadastro' ? (
           <>
-            <p>Ainda não tem cadastro?</p>
-            <p>Então, antes de buscar seu melhor amigo, precisamos de alguns dados:</p>
+            <p>Ainda não tem cadastro? <br /> Então, antes de buscar seu melhor amigo, precisamos de alguns dados:</p>
             <form>
               <label htmlFor='email'>E-mail</label>
               <input id='email' type="email" placeholder='Escolha seu melhor email' />
@@ -42,7 +41,7 @@ const Register = () => {
               </span>
               <label htmlFor='pass-confirm'>Confirme sua senha</label>
               <span>
-                <input id='pass-confirm' type='password' placeholder='Crie uma senha' />
+                <input id='pass-confirm' type='password' placeholder='Repita a senha criada acima' />
                 <span onClick={() => changeType('#pass-confirm')} className='pass__view'></span>
               </span>
               <Link to='/login'>

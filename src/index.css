@@ -243,7 +243,8 @@ button:hover,
   margin-right: 5rem;
 }
 
-.initial::after {
+.initial::after,
+.register::after {
   content: '';
   background: url('./assets/body-bg.svg') no-repeat;
   right: 0;
@@ -252,6 +253,7 @@ button:hover,
   width: 4.25rem;
   height: 26rem;
   position: absolute;
+  z-index: -1;
 }
 /* #endregion */
 
@@ -268,28 +270,14 @@ button:hover,
   margin-right: 1.5rem;
 }
 
-.register::after {
-  content: '';
-  transform: scaleX(-1);
-  background: url('./assets/body-bg.svg') no-repeat;
-  left: 0;
-  top: 23rem;
-  background-size: 100%;
-  width: 5.25rem;
-  height: 26rem;
-  position: absolute;
-  z-index: -1;
-}
-
 .register::before {
   content: '';
-  background: url('./assets/paws.png') no-repeat;
+  background: url('./assets/paws.svg') no-repeat;
   right: 0;
   top: 0;
-  background-size: 100%;
-  width: 135px;
-  height: 227px;
-  max-width: 8.375rem;
+  background-size: cover;
+  width: 8.5rem;
+  height: 14.2rem;
   position: absolute;
 }
 
@@ -360,8 +348,8 @@ button:hover,
   background: url('./assets/eye.svg');
   background-repeat: no-repeat;
   position: absolute;
-  margin-top: 14px;
-  right: 40px;
+  margin-top: 1rem;
+  right: 2.5rem;
   cursor: pointer;
   transition: 0.3s;
   z-index: 10;
@@ -376,7 +364,7 @@ button:hover,
   color: var(--coral);
   text-align: center;
   margin-top: 0.875rem;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   text-decoration: underline;
   cursor: pointer;
   display: block;
@@ -577,11 +565,13 @@ legend {
     margin: 2.5rem auto -2.5rem;
   }
 
-  .initial {
+  .initial,
+  .register {
     padding-top: 11.25rem;
   }
 
-  .initial img {
+  .initial img,
+  .register img {
     height: 3.875rem;
     margin-bottom: 2.5rem;
   }
@@ -601,10 +591,31 @@ legend {
     margin-right: 5rem;
   }
 
-  .initial::after {
+  .initial::after,
+  .register::after {
     top: 16.75rem;
     width: 8.375rem;
     height: 41.5rem;
+  }
+
+  .register form {
+    margin: 2.5rem;
+    width: 50%;
+  }
+
+  .register .pass__view {
+    right: 28%;
+  }
+
+  .register label {
+    font-size: 1.125rem;
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .register::before {
+    width: 14rem;
+    height: 21rem;
   }
 }
 /* #endregion */
