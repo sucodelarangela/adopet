@@ -35,6 +35,7 @@ body {
 input,
 textarea {
   font-family: var(--poppins);
+  font-size: 0.875rem;
   color: var(--dark-grey);
 }
 
@@ -83,6 +84,10 @@ p {
   font-size: 1rem;
   line-height: 1.5rem;
 }
+
+ul {
+  list-style: none;
+}
 /* #endregion */
 
 /* #region ----------------- APP COMPONENT */
@@ -110,7 +115,7 @@ p {
 }
 
 .header__user {
-  max-width: 2.5rem;
+  width: 2.5rem;
 }
 
 .header nav {
@@ -244,7 +249,8 @@ button:hover,
 }
 
 .initial::after,
-.register::after {
+.register::after,
+.message::after {
   content: '';
   background: url('./assets/body-bg.svg') no-repeat;
   right: 0;
@@ -254,6 +260,10 @@ button:hover,
   height: 26rem;
   position: absolute;
   z-index: -1;
+}
+
+.message::after {
+  display: none;
 }
 /* #endregion */
 
@@ -395,10 +405,6 @@ button:hover,
   margin: 0;
 }
 
-.cards {
-  gap: 2rem;
-}
-
 .home p,
 .message p {
   display: block;
@@ -471,6 +477,7 @@ a.card__contact {
   margin: 0;
   color: var(--dark-grey);
   display: flex;
+  white-space: nowrap;
 }
 
 a.card__contact::before {
@@ -560,6 +567,10 @@ legend {
     width: 8rem;
   }
 
+  .header__user {
+    width: 3rem;
+  }
+
   .footer__img {
     width: 21rem;
     margin: 2.5rem auto -2.5rem;
@@ -592,7 +603,9 @@ legend {
   }
 
   .initial::after,
-  .register::after {
+  .register::after,
+  .message::after {
+    display: block;
     top: 16.75rem;
     width: 8.375rem;
     height: 41.5rem;
@@ -616,6 +629,38 @@ legend {
   .register::before {
     width: 14rem;
     height: 21rem;
+  }
+
+  .home,
+  .message {
+    padding-top: 11.75rem;
+  }
+
+  .home > p,
+  .message > p,
+  .message form {
+    width: 32rem;
+    margin-bottom: 2rem;
+  }
+
+  .message form {
+    margin-bottom: 5.625rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 2rem;
+    gap: 1rem;
+  }
+
+  div.card {
+    width: fit-content;
+    margin: 0;
+  }
+
+  .message button {
+    max-width: 10.25rem;
   }
 }
 /* #endregion */

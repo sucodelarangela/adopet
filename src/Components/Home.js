@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <section className='home'>
+      <p>Olá! <br /> Veja os amigos disponíveis para adoção!</p>
       <div className='cards'>
-        <p>Olá! Veja os amigos disponíveis para adoção!</p>
         {
           pets.map((pet, i) => (
             <div key={i} className='card'>
