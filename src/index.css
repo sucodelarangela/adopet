@@ -250,7 +250,8 @@ button:hover,
 
 .initial::after,
 .register::after,
-.message::after {
+.message::after,
+.home::after {
   content: '';
   background: url('./assets/body-bg.svg') no-repeat;
   right: 0;
@@ -262,7 +263,8 @@ button:hover,
   z-index: -1;
 }
 
-.message::after {
+.message::after,
+.home::after {
   display: none;
 }
 /* #endregion */
@@ -593,13 +595,7 @@ legend {
   }
 
   .home__buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 2.375rem;
-    gap: 1rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
   }
 
   .initial::after,
@@ -626,6 +622,11 @@ legend {
     margin-top: 1.5rem;
   }
 
+  .register button {
+    margin-bottom: 11.625rem;
+    max-width: 10.25rem;
+  }
+
   .register::before {
     width: 14rem;
     height: 21rem;
@@ -650,7 +651,7 @@ legend {
   .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 0 2rem;
+    margin: 0 2rem 2rem;
     gap: 1rem;
   }
 
@@ -666,4 +667,113 @@ legend {
 /* #endregion */
 
 /* #region ----------------- MEDIA QUERY DESKTOP */
+@media screen and (min-width: 1280px) {
+  button,
+  .button {
+    width: 22.625rem;
+  }
+
+  .header {
+    padding: 3rem 10.125rem 0;
+  }
+
+  .header__user {
+    width: 3.5rem;
+  }
+  /*
+
+  .footer__img {
+    width: 21rem;
+    margin: 2.5rem auto -2.5rem;
+  }
+*/
+  .initial,
+  .register {
+    padding-top: 2.25rem;
+  }
+  /*
+  .initial img,
+  .register img {
+    height: 3.875rem;
+    margin-bottom: 2.5rem;
+  } */
+
+  .initial p {
+    width: 30.5rem;
+  }
+
+  .register p,
+  .register input {
+    width: 34.5rem;
+  }
+
+  /* .register form {
+    margin: 2.5rem;
+    width: 50%;
+  }
+*/
+
+  .register .pass__view {
+    right: 33%;
+  }
+  /*
+  .register label {
+    font-size: 1.125rem;
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+  }
+*/
+  .register::before {
+    width: 18.375rem;
+    height: 23.625rem;
+    background: url('./assets/paws-1.svg') no-repeat;
+  }
+
+  .initial::after,
+  .register::after,
+  .message::after,
+  .home::after {
+    display: block;
+    top: 11.25rem;
+    width: 8.375rem;
+    height: 41.5rem;
+  }
+
+  .home,
+  .message {
+    padding-top: 6.375rem;
+  }
+
+  /*
+  .home > p,
+  .message > p,
+  .message form {
+    width: 32rem;
+    margin-bottom: 2rem;
+  }
+  */
+
+  .message form {
+    width: 34.5rem;
+    padding: 2rem;
+    margin-bottom: 5.625rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 2rem 3.75rem;
+    gap: 1rem;
+  }
+
+  /*
+  div.card {
+    width: fit-content;
+    margin: 0;
+  }
+
+  .message button {
+    max-width: 10.25rem;
+  } */
+}
 /* #endregion */
