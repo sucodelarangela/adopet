@@ -7,7 +7,6 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  overflow-x: hidden;
 }
 
 :root {
@@ -157,7 +156,8 @@ p {
 /* #endregion */
 
 /* #region ----------------- BUTTON COMPONENT */
-button {
+button,
+.button {
   width: 50vw;
   background: var(--coral);
   padding: 0.5rem;
@@ -165,6 +165,7 @@ button {
   font-size: 16px;
   line-height: 24px;
   color: var(--white);
+  text-align: center;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   transition: 0.3s background;
   border-radius: 6px;
@@ -172,7 +173,8 @@ button {
   margin: 0 4px 4px;
 }
 
-button:hover {
+button:hover,
+.button:hover {
   background: var(--btn-hover);
 }
 /* #endregion */
@@ -190,18 +192,13 @@ button:hover {
 }
 
 .footer__img {
-  position: absolute;
-  bottom: 5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -1;
+  display: block;
+  margin: 1.5rem auto -1.125rem;
 }
 
 .footer a {
   color: var(--white);
   border-bottom: 1px solid;
-  /* text-decoration: underline;
-  text-underline-offset: 6px; */
   transition: 0.3s color;
 }
 
@@ -211,24 +208,25 @@ button:hover {
 /* #endregion */
 
 /* #region ----------------- INITIAL COMPONENT */
-.home {
+.home,
+.initial {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
   padding-top: 6.25rem;
 }
 
-.home img {
+.initial img {
   height: 2.875rem;
 }
 
-.home h3 {
+.initial h3 {
   font-family: var(--ibm);
   color: var(--white);
 }
 
-.home p {
+.home p,
+.initial p {
   width: 15.5rem;
   text-align: center;
   color: var(--white);
@@ -245,13 +243,13 @@ button:hover {
   margin-right: 5rem;
 }
 
-.home::after {
+.initial::after {
   content: '';
   background: url('./assets/body-bg.svg') no-repeat;
-  right: -1rem;
+  right: 0;
   top: 12.5rem;
-  background-size: 100%;
-  width: 5.25rem;
+  background-size: cover;
+  width: 4.25rem;
   height: 26rem;
   position: absolute;
 }
@@ -549,4 +547,67 @@ legend {
   border: none;
   box-shadow: none;
 }
+/* #endregion */
+
+/* #region ----------------- MEDIA QUERY TABLET */
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 1.125rem;
+  }
+
+  button,
+  .button {
+    width: 21.5rem;
+    padding: 0.75rem;
+    font-size: 1.125rem;
+  }
+
+  .App::before {
+    width: 35rem;
+    height: 30rem;
+  }
+
+  .header__logo {
+    display: block;
+    width: 8rem;
+  }
+
+  .footer__img {
+    width: 21rem;
+    margin: 2.5rem auto -2.5rem;
+  }
+
+  .initial {
+    padding-top: 11.25rem;
+  }
+
+  .initial img {
+    height: 3.875rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .initial p {
+    width: 21.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .home__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.375rem;
+    gap: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  .initial::after {
+    top: 16.75rem;
+    width: 8.375rem;
+    height: 41.5rem;
+  }
+}
+/* #endregion */
+
+/* #region ----------------- MEDIA QUERY DESKTOP */
 /* #endregion */
