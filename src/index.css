@@ -613,7 +613,7 @@ legend {
   }
 
   .register .pass__view {
-    right: 28%;
+    right: calc(25% + 1.5rem);
   }
 
   .register label {
@@ -707,22 +707,19 @@ legend {
     width: 34.5rem;
   }
 
-  /* .register form {
+  .register form {
     margin: 2.5rem;
-    width: 50%;
+    width: 34.5rem;
   }
-*/
+
+  .register span {
+    width: auto;
+  }
 
   .register .pass__view {
-    right: 33%;
+    right: calc(50vw - 17rem);
   }
-  /*
-  .register label {
-    font-size: 1.125rem;
-    padding-bottom: 0.5rem;
-    margin-top: 1.5rem;
-  }
-*/
+
   .register::before {
     width: 18.375rem;
     height: 23.625rem;
