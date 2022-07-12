@@ -344,6 +344,10 @@ button:hover,
   resize: none;
 }
 
+.register .button {
+  margin-top: 1.5rem;
+}
+
 .register .img {
   width: 18px;
   height: 16px;
@@ -371,7 +375,7 @@ button:hover,
   background: url('./assets/eye-hover.svg');
 }
 
-.register a,
+.register__forgot,
 .message a {
   color: var(--coral);
   text-align: center;
@@ -622,8 +626,9 @@ legend {
     margin-top: 1.5rem;
   }
 
-  .register button {
+  .register .button {
     margin-bottom: 11.625rem;
+    margin-top: 2rem;
     max-width: 10.25rem;
   }
 
