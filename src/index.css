@@ -270,6 +270,14 @@ button:hover,
 /* #endregion */
 
 /* #region ----------------- FORMS COMPONENT */
+.register .error {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--coral);
+  margin-top: 0.25rem;
+  width: 100%;
+}
+
 .register,
 .home,
 .message {

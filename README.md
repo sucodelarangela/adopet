@@ -11,11 +11,11 @@
     </a>
     <figcaption>Para testar o site, basta clicar na imagem! ^^</figcaption>
   </figure>
-  
+
 ![GitHub deployments](https://img.shields.io/github/deployments/sucodelarangela/alura-geek/alurageek?style=flat-square)
 
 -->
-  
+
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
@@ -25,6 +25,7 @@
   <a href="https://github.com/codermarcos/simple-mask-money"><img src="https://img.shields.io/badge/SimpleMaskMoney-222222?style=for-the-badge" /></a>
   <img src="https://img.shields.io/badge/SQLite3-07405E?style=for-the-badge&logo=sqlite&logoColor=white" />  -->
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+  <a href='https://react-hook-form.com/' target='_blank'><img src="https://img.shields.io/badge/React Hook Form-EC5990?style=for-the-badge"/></a>
 </div>
 
 ## 🔎 Visão geral
@@ -95,7 +96,8 @@ Senha: 12345aZ
 
 ## 📈 Etapas do projeto
 
-- **Semana 1:** Desenvolvimento das estruturas e estilizações. No meu caso, escolhi desenvolver com React, foco atual dos meus estudos.
+- **Semana 1:** Desenvolvimento das estruturas e estilizações com layout responsivo em metodologia _mobile-first_. No meu caso, escolhi desenvolver com React, foco atual dos meus estudos.
+- **Semana 2 (em andamento):** Validação dos formulários.
 
 <!--
 

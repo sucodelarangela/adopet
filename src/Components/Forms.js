@@ -1,13 +1,21 @@
 // dependencies and hooks
-import { Link, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
 
 // components
-import Button from './Button.js';
 import Input from './Input.js';
+import Button from './Button.js';
 
-const Register = () => {
+const Forms = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+
+  // destructuring useForm
+  const { register, handleSubmit, formState: { errors } } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
 
   return (
     <section className='register'>
@@ -16,22 +24,22 @@ const Register = () => {
         location.pathname === '/cadastro' ? (
           <>
             <p>Ainda não tem cadastro? <br /> Então, antes de buscar seu melhor amigo, precisamos de alguns dados:</p>
-            <form>
-              <Input id='email' type='email' placeholder='Escolha seu melhor email' children='E-mail' />
-              <Input id='name' type='text' placeholder='Digite seu nome completo' children='Nome' />
-              <Input id='pass-create' type='password' placeholder='Crie uma senha' children='Senha' />
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <Input id='name' type='text' {...register('name')} placeholder='Digite seu nome completo' children='Nome' />
+              <Input id='email' type='email' {...register('email')} placeholder='Escolha seu melhor email' children='E-mail' />
+              <Input id='pass-create' type='password' {...register('password')} placeholder='Crie uma senha' children='Senha' />
               <Input id='pass-confirm' type='password' placeholder='Repita a senha criada acima' children='Confirme sua senha' />
-              <Link className='button' to='/login'>Cadastrar</Link>
+              <Button type='submit' children='Cadastrar' />
             </form>
           </>
         ) : (
           <>
             <p>Já tem conta? Faça seu login:</p>
-            <form>
+            <form onSubmit={() => navigate('/home')}>
               <Input id='email' type='email' placeholder='Insira seu email' children='E-mail' />
               <Input id='pass' type='password' placeholder='Insira sua senha' children='Senha' />
-              <a class='register__forgot' href="#">Esqueci minha senha</a>
-              <Link className='button' to='/home'>Entrar</Link>
+              <a className='register__forgot' href="#">Esqueci minha senha</a>
+              <Button type='submit' children='Entrar' />
             </form>
           </>
         )
@@ -40,4 +48,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Forms;
