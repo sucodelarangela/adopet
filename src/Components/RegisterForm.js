@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 
 const RegisterForm = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
   let element = '';
 
   const changeType = (id) => {
@@ -49,8 +49,9 @@ const RegisterForm = () => {
         <label htmlFor="pass-confirm">Confirme sua senha</label>
         <span>
           <span onClick={() => changeType('#pass-confirm')} className='pass__view'></span>
-          <input id='pass-confirm' type="password" placeholder='Repita a senha criada acima' required />
+          <input id='pass-confirm' type="password" {...register('confirm_password', { required: 'Repita a senha criada acima', validate: (value) => { if (watch('password') !== value) { return 'As senhas não batem'; }; } })} placeholder='Repita a senha criada acima' required />
         </span>
+        {errors.confirm_password && <p className="error">{errors.confirm_password.message}</p>}
         <Button type='submit' children='Cadastrar' />
       </form>
     </section >
