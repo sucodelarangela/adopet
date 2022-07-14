@@ -6,7 +6,10 @@ import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 
 const RegisterForm = () => {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, watch, formState: { errors } } = useForm({
+    mode: 'onBlur',
+    reValidateMode: 'onChange'
+  });
   let element = '';
 
   const changeType = (id) => {
@@ -32,11 +35,11 @@ const RegisterForm = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
 
         <label htmlFor="name">Nome</label>
-        <input id='name' type="text" {...register("name", { required: 'É necessário informar seu nome', maxLength: { value: 25, message: 'O número máximo de caracteres é 25' } })} placeholder='Digite seu nome completo' />
+        <input id='name' type="text" {...register("name", { required: 'É necessário informar seu nome', maxLength: { value: 25, message: 'O número máximo de caracteres é 25' } })} placeholder='Digite seu nome completo' required />
         {errors.name && <p className="error">{errors.name.message}</p>}
 
         <label htmlFor="email">E-mail</label>
-        <input id='email' type="email" {...register("email", { required: 'É necessário informar um endereço de email', pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ })} placeholder='Escolha seu melhor email' />
+        <input id='email' type="email" {...register("email", { required: 'É necessário informar um endereço de email', pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ })} placeholder='Escolha seu melhor email' required />
         {errors.email && <p className="error">{errors.email.message || 'Por favor, verifique o email digitado'}</p>}
 
         <label htmlFor="pass-create">Senha</label>
