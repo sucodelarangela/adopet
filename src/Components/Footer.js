@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 const Footer = () => {
   const location = useLocation();
-  console.log(location.pathname);
+
   return (
     <>
       {location.pathname === '/' && <img className="footer__img" src="pets.svg" alt="" aria-hidden='true' />}
