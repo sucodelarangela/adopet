@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Initial from './Components/Initial.js';
 import Header from "./Components/Header.js";
 import Footer from "./Components/Footer.js";
-import Forms from "./Components/Forms.js";
+import LoginForm from "./Components/LoginForm.js";
 import Home from "./Components/Home.js";
 import Message from "./Components/Message.js";
 import RegisterForm from "./Components/RegisterForm.js";
@@ -17,7 +17,7 @@ function App() {
         <Header />
         <Routes>
           <Route exact path='/' element={<Initial />} />
-          <Route path='/login' element={<Forms />} />
+          <Route path='/login' element={<LoginForm />} />
           <Route path='/cadastro' element={<RegisterForm />} />
           <Route path='/home' element={<Home />} />
           <Route path='/mensagem' element={<Message />} />

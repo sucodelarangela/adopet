@@ -6,8 +6,11 @@ import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 
 const RegisterForm = () => {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  let element = '';
+  // destructuring useForm
+  const { register, handleSubmit, watch, formState: { errors } } = useForm({
+    mode: 'onBlur',
+    reValidateMode: 'onChange'
+  });
 
   const changeType = (id) => {
     element = document.querySelector(id);
@@ -18,6 +21,7 @@ const RegisterForm = () => {
     }
   };
 
+  let element = '';
   useEffect(() => {
   }, [element]);
 
@@ -42,16 +46,17 @@ const RegisterForm = () => {
         <label htmlFor="pass-create">Senha</label>
         <span>
           <span onClick={() => changeType('#pass-create')} className='pass__view'></span>
-          <input id='pass-create' type="password" {...register("password", { required: 'Crie uma senha', pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/ })} placeholder='Crie uma senha' required />
+          <input id='pass-create' type="password" {...register("password", { required: 'Crie uma senha', pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/ })} placeholder='Crie uma senha' />
         </span>
         {errors.password && <p className="error">{errors.password.message || 'A senha deve conter pelo menos uma letra maiúscula, um número e ter entre 6 e 15 caracteres'}</p>}
 
         <label htmlFor="pass-confirm">Confirme sua senha</label>
         <span>
           <span onClick={() => changeType('#pass-confirm')} className='pass__view'></span>
-          <input id='pass-confirm' type="password" {...register('confirm_password', { required: 'Repita a senha criada acima', validate: (value) => { if (watch('password') !== value) { return 'As senhas não batem'; }; } })} placeholder='Repita a senha criada acima' required />
+          <input id='pass-confirm' type="password" {...register('confirm_password', { required: 'Repita a senha criada acima', validate: (value) => { if (watch('password') !== value) { return 'As senhas não batem'; }; } })} placeholder='Repita a senha criada acima' />
         </span>
         {errors.confirm_password && <p className="error">{errors.confirm_password.message}</p>}
+
         <Button type='submit' children='Cadastrar' />
       </form>
     </section >
