@@ -1,11 +1,10 @@
-// dependencies and hooks
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 // components
 import Input from './Input.js';
 import Button from './Button.js';
 
-const Register = () => {
+const Forms = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -40,4 +39,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Forms;

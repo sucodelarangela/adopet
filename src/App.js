@@ -8,6 +8,7 @@ import Footer from "./Components/Footer.js";
 import Forms from "./Components/Forms.js";
 import Home from "./Components/Home.js";
 import Message from "./Components/Message.js";
+import RegisterForm from "./Components/RegisterForm.js";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Initial />} />
           <Route path='/login' element={<Forms />} />
-          <Route path='/cadastro' element={<Forms />} />
+          <Route path='/cadastro' element={<RegisterForm />} />
           <Route path='/home' element={<Home />} />
           <Route path='/mensagem' element={<Message />} />
           <Route path='/perfil' element={<Message />} />
