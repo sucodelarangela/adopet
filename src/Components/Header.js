@@ -24,8 +24,8 @@ const Header = () => {
     <header className='header'>
       <nav>
         <div>
-          <img className='header__logo' src="logo-clear.svg" alt="Logo AdoPet" />
-          <Link className='header__home' to="/" aria-label='Ir para Home'></Link>
+          <Link to='/' aria-label='Tela inicial'><img className='header__logo' src="logo-clear.svg" alt="" aria-hidden='true' /></Link>
+          <Link className='header__home' to="/home" ></Link>
           <Link className='header__message' to="/mensagem" aria-label='Ir para Mensagens'></Link>
         </div>
         {user}
