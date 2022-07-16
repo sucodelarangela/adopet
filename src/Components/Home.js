@@ -1,3 +1,6 @@
+// dependencies
+import { motion } from 'framer-motion';
+
 // assets
 import { pets } from '../data/data.js';
 
@@ -6,7 +9,7 @@ import CardPet from './CardPet.js';
 
 const Home = () => {
   return (
-    <section className='home'>
+    <motion.section className='home' initial={{ width: 0 }} animate={{ width: "100%" }} exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}>
       <p>Olá! <br /> Veja os amigos disponíveis para adoção!</p>
       <div className='cards'>
         {
@@ -23,7 +26,7 @@ const Home = () => {
           ))
         }
       </div>
-    </section >
+    </motion.section >
   );
 };
 

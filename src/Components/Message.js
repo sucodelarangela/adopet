@@ -3,6 +3,7 @@ import Button from './Button';
 
 // dependencies
 import { useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 // assets
 import loggedUser from '../assets/logged-user.png';
@@ -11,7 +12,7 @@ const Message = () => {
   const location = useLocation();
 
   return (
-    <section className='message'>
+    <motion.section className='message' initial={{ width: 0 }} animate={{ width: "100%" }} exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}>
       {
         location.pathname === '/mensagem' ? (
           <>
@@ -49,7 +50,7 @@ const Message = () => {
           </>
         )
       }
-    </section>
+    </motion.section>
   );
 };
 
