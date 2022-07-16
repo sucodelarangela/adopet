@@ -1,6 +1,6 @@
-# AdoPet
+_For the English version of this README, click [here](#English)._
 
-<!-- _For the English version of this README, click [here](#English)._ -->
+# AdoPet
 
 <div align='center'>
 
@@ -33,12 +33,14 @@
 
 Olá, devs!
 
-Neste repositório você encontrará uma página de uma empresa fictícia chamada AdoPet, que funciona como intermediária entre adotantes de pets e ONGs com foco em retirar animais das ruas. A proposta da AdoPet é trazer mais usuários e aumentar a interação entre possíveis adotantes e representantes dessas ONGs e para isso, o objetivo do projeto é implementar uma plataforma e levar a empresa pro mundo digital. Para isso, o site deve conter os seguintes requisitos:
+Neste repositório você encontrará uma página de uma empresa fictícia chamada **AdoPet**, que funciona como intermediária entre adotantes de pets e ONGs com foco em retirar animais das ruas. A proposta da AdoPet é trazer mais usuários e aumentar a interação entre possíveis adotantes e representantes dessas ONGs e para isso, o objetivo do projeto é implementar uma plataforma e levar a empresa pro mundo digital. Para isso, o site deve conter os seguintes requisitos:
 
 - Uma página inicial que será de login, contendo os botões de "já tenho conta" e "quero me cadastrar".
+  > Página alterada após feedbacks de usuários: agora ela mostra um botão Ver Pets Disponíveis para Adoção, visto que os feedbacks sugerem que o foco da AdoPet são os animais e o acesso às suas informações é o que faz os usuários quererem se cadastrar.
 - Uma página de cadastro que terá um formulário solicitando as informações: nome, e-mail e senha.
 - Uma página de login com um formulário de e-mail e senha.
 - Uma página que deve aparecer após o login com uma lista de cachorros e gatos. Cada animal deve mostrar foto, nome, idade, porte, características e região. Para cada animal haverá um botão de contato.
+  > Como já mencionado, a página agora pode ser visualizada sem a necessidade de login, permitindo que os usuários se apaixonem pelos pets primeiramente, o que seria uma forma melhor de atrair novos cadastros.
 - Uma página de edição de envio de mensagem, com um formulário com campos de nome, telefone, nome do animal e mensagem.
 - Permitir a edição do perfil, onde também será possível incluir foto do usuário.
 - O site seja responsivo para dar aos clientes a facilidade de comprar através de dispositivos mobiles.
@@ -98,7 +100,7 @@ Senha: 12345aZ
 ## 📈 Etapas do projeto
 
 - **Semana 1:** Desenvolvimento das estruturas e estilizações com layout responsivo em metodologia _mobile-first_. No meu caso, escolhi desenvolver com React, foco atual dos meus estudos.
-- **Semana 2 (em andamento):** Validação dos formulários.
+- **Semana 2:** Validação dos formulário, animação na transição de páginas, adequações de layout e rotas após feedback de uso da aplicação.
 
 <!--
 
@@ -117,7 +119,7 @@ Senha: 12345aZ
     <td>Badge de Participação</td>
     <td>Badge de Apoio<br>à Comunidade</td>
   </tr>
-</table>
+</table> -->
 
 ---
 
@@ -131,7 +133,21 @@ _English version_
 
 Hello, devs!
 
-In this repo you will find an e-commerce page (admin version) for a geek store named **Alura Geek**, which is currently in development as a result of a Front-End Challenge (3rd edition) exclusively for students of [Alura](https://www.alura.com.br) tech school.
+In this repo you will find a website for a pseudo company called **AdoPet**, which acts as an intermediary between animal adopters and NGOs that focus on removing animals from the streets. The purpose of AdoPet is to attract users and increase interaction between adopters and representatives of these NGOs. Thus, the website must have the following features:
+
+- A home page with two buttons allowing users to log in or register to the website.
+  > Page altered due to users feedback: now it shows a button to See Pets Available for Adoption, as feedbacks taken suggested that AdoPet's center of attention are the pets and access to their information is what really makes users to register.
+- A registration form for new users with name, e-mail and password inputs.
+- A login form with e-mail and password inputs.
+- The pet page with their infos which must show after logging in. Each animal must show a photo, name, age, size, traits and location, plus a contact link.
+  > As mentioned on the first item, this page now shows without the need to log in first, allowing users to fall in love with the pets first, which would be a better way to attract new registered users.
+- A form for sending a message for the people responsible for the animal, with fields for name, phone, name of the animal and the message itself.
+- It must allow the user to edit its profile, changing information and user photo.
+- The page must be responsive to all kinds of devices.
+
+This project is currently in development as a result of a Front-End Challenge (4th edition) exclusively for students of [Alura](https://www.alura.com.br) tech school.
+
+<!--
 
 ## ⚙️ How to use it
 
@@ -168,6 +184,7 @@ APP RUNNING ON PORT 3000
 E-mail: admin@email.com
 Password: 12345aZ
 ```
+-->
 
 ## 🦾 About the challenge
 
@@ -177,12 +194,16 @@ There are no specific classes for the challenge, so we must go on with the knowl
 
 The Challenge lasts 4 weeks. Every Monday for 3 weeks we will receive new assignments from the designers and should develop what was asked. On week 4 we are free to implement new features or play with styles and othe appearances feats.
 
-The Challenge started at March 14th, 2022.
+The Challenge started at July 4th, 2022.
 
 ## 📈 Project stages
 
-- **Week 1:** Development of structure and style. In my case, I have chosen to develop the page using HTML and CSS and soon the HTML page will change content dinamically with EJS.
-- **Week 2:** Implementation of Node.js, Express and EJS to dinamically change HTML content when navigating the website.
+- **Week 1:** Development of structure and styles with responsive layout developed with _mobile-first_ methodology. In my case, I have chosen to develop the page using React with JavaScript.
+
+- **Week 2:** Form validation with _react-hook-form_, animated page transition with _framer-motion_ library and layout changes due to user feedbacks.
+
+<!--
+
 - **Week 3:** Form validations (login, contact and product registration), creation of routes and controllers and implementation of database.
 - **Week 4:** Project conclusion (products registered in database and new product registration/edition functionality).
 - **Future implementations:** Functional search bar.
