@@ -1,5 +1,6 @@
 // dependencies
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 // hooks and dependencies
 import { Helmet } from 'react-helmet';
@@ -9,7 +10,7 @@ const Home = () => {
   const matches = useMediaQuery('(max-width: 767px)');
 
   return (
-    <section className='initial'>
+    <motion.section className='initial' initial={{ width: 0 }} animate={{ width: "100%" }} exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}>
       <Helmet>
         <style>{"body { background-color: #3874ff; }"}</style>
       </Helmet>
@@ -24,7 +25,7 @@ const Home = () => {
         <Link className='button' to='/cadastro'>Quero me cadastrar
         </Link>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

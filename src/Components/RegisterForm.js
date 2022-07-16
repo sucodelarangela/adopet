@@ -4,6 +4,7 @@ import Button from "./Button";
 // dependencies / hooks
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
+import { motion } from 'framer-motion';
 
 const RegisterForm = () => {
   // destructuring useForm
@@ -30,7 +31,7 @@ const RegisterForm = () => {
   };
 
   return (
-    <section className='register'>
+    <motion.section className='register' initial={{ width: 0 }} animate={{ width: "100%" }} exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}>
       <img src="logo-blue.svg" alt="" />
       <p>Ainda não tem cadastro? <br /> Então, antes de buscar seu melhor amigo, precisamos de alguns dados:</p>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -59,7 +60,7 @@ const RegisterForm = () => {
 
         <Button type='submit' children='Cadastrar' />
       </form>
-    </section >
+    </motion.section >
   );
 };
 

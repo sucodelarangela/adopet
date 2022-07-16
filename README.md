@@ -26,6 +26,7 @@
   <img src="https://img.shields.io/badge/SQLite3-07405E?style=for-the-badge&logo=sqlite&logoColor=white" />  -->
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
   <a href='https://react-hook-form.com/' target='_blank'><img src="https://img.shields.io/badge/React Hook Form-EC5990?style=for-the-badge"/></a>
+  <a href='https://www.framer.com/motion/' target='_blank'><img src="https://img.shields.io/badge/Framer Motion-61B?style=for-the-badge"/></a>
 </div>
 
 ## 🔎 Visão geral

@@ -1,23 +1,24 @@
-import { useLocation, useNavigate } from 'react-router-dom';
+// dependencies
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 // components
-import Input from './Input.js';
 import Button from './Button.js';
 
 const LoginForm = () => {
-  const location = useLocation();
   const navigate = useNavigate();
 
   // destructuring useForm
-  const { register, handleSubmit, watch, formState: { errors } } = useForm({
+  const { register, handleSubmit, formState: { errors } } = useForm({
     mode: 'onBlur',
     reValidateMode: 'onChange'
   });
 
   const onSubmit = (data) => {
     console.log(data);
+    navigate('/home');
   };
 
   let element = '';
@@ -35,7 +36,7 @@ const LoginForm = () => {
   }, [element]);
 
   return (
-    <section className='register'>
+    <motion.section className='register' initial={{ width: 0 }} animate={{ width: "100%" }} exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}>
       <img src="logo-blue.svg" alt="" />
       <p>Já tem conta? Faça seu login:</p>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -46,14 +47,14 @@ const LoginForm = () => {
         <label htmlFor="pass">Senha</label>
         <span>
           <span onClick={() => changeType('#pass')} className='pass__view'></span>
-          <input id='pass' type="password" {...register("password", { required: 'Crie uma senha', pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/ })} placeholder='Insira sua senha' />
+          <input id='pass' type="password" {...register("password", { required: 'Insira sua senha', pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/ })} placeholder='Insira sua senha' />
         </span>
         {errors.password && <p className="error">{errors.password.message || 'A senha deve conter pelo menos uma letra maiúscula, um número e ter entre 6 e 15 caracteres'}</p>}
 
         <a className='register__forgot' href="#">Esqueci minha senha</a>
         <Button type='submit' children='Entrar' />
       </form>
-    </section >
+    </motion.section >
   );
 };
 
