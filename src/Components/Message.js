@@ -12,7 +12,7 @@ const Message = () => {
   const location = useLocation();
 
   return (
-    <motion.section className='message' initial={{ width: 0 }} animate={{ width: "100%" }} exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}>
+    <motion.section className='message' initial={{ width: 0 }} animate={{ width: "100%", transition: { duration: 0.5 } }} exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}>
       {
         location.pathname === '/mensagem' ? (
           <>

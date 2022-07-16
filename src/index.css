@@ -148,7 +148,8 @@ ul {
   background: url('./assets/home.svg') no-repeat center;
 }
 
-.header__home:hover {
+.header__home:hover,
+.header__home:focus {
   background: url('./assets/home-hover.svg') no-repeat center;
 }
 
@@ -156,7 +157,8 @@ ul {
   background: url('./assets/messages.svg') no-repeat center;
 }
 
-.header__message:hover {
+.header__message:hover,
+.header__message:focus {
   background: url('./assets/messages-hover.svg') no-repeat center;
 }
 /* #endregion */
@@ -164,7 +166,7 @@ ul {
 /* #region ----------------- BUTTON COMPONENT */
 button,
 .button {
-  width: 50vw;
+  width: 54vw;
   background: var(--coral);
   padding: 0.5rem;
   font-weight: 600;
@@ -180,7 +182,9 @@ button,
 }
 
 button:hover,
-.button:hover {
+.button:hover,
+button:focus,
+.button:focus {
   background: var(--btn-hover);
 }
 /* #endregion */
@@ -208,7 +212,8 @@ button:hover,
   transition: 0.3s color;
 }
 
-.footer a:hover {
+.footer a:hover,
+.footer a:focus {
   color: var(--coral);
 }
 /* #endregion */
@@ -247,6 +252,28 @@ button:hover,
   gap: 1rem;
   margin-left: 5rem;
   margin-right: 5rem;
+}
+
+.initial .button {
+  transition: 0.3s;
+}
+
+.initial .button:hover,
+.initial .button:focus {
+  transform: scale(1.05);
+}
+
+.initial__link {
+  color: var(--white);
+  border-bottom: 1px solid;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.initial__link:hover,
+.initial__link:focus {
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .initial::after,
@@ -380,7 +407,8 @@ button:hover,
   z-index: 10;
 }
 
-.pass__view:hover {
+.pass__view:hover,
+.pass__view:focus {
   background: url('./assets/eye-hover.svg');
 }
 
@@ -504,7 +532,8 @@ a.card__contact::before {
   transition: 0.3s;
 }
 
-a.card__contact:hover::before {
+a.card__contact:hover::before,
+a.card__contact:focus::before {
   background: url('./assets/message-hover.svg') no-repeat;
 }
 

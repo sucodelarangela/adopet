@@ -10,7 +10,7 @@ const Home = () => {
   const matches = useMediaQuery('(max-width: 767px)');
 
   return (
-    <motion.section className='initial' initial={{ width: 0 }} animate={{ width: "100%" }} exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}>
+    <motion.section className='initial' initial={{ width: 0 }} animate={{ width: "100%", transition: { duration: 0.5 } }} exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}>
       <Helmet>
         <style>{"body { background-color: #3874ff; }"}</style>
       </Helmet>
@@ -20,12 +20,14 @@ const Home = () => {
         {matches ? 'Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!' : 'Adotar pode mudar uma vida. Que tal buscar seu novo melhor amigo hoje? Vem com a gente!'}
       </p>
       <div className='home__buttons'>
-        <Link className='button' to='/login'>Já tenho conta
-        </Link>
-        <Link className='button' to='/cadastro'>Quero me cadastrar
-        </Link>
+        <Link className='button' to='/home'>Ver pets disponíveis para adoção</Link>
+        <div>
+          <a className='initial__link' href="/cadastro">Cadastrar</a>
+          <span style={{ fontSize: 14, padding: '0 1rem', color: '#fff' }}>ou</span>
+          <a className='initial__link' href="/login">Fazer login</a>
+        </div>
       </div>
-    </motion.section>
+    </motion.section >
   );
 };
 

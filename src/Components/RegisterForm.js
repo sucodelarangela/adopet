@@ -31,7 +31,7 @@ const RegisterForm = () => {
   };
 
   return (
-    <motion.section className='register' initial={{ width: 0 }} animate={{ width: "100%" }} exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}>
+    <motion.section className='register' initial={{ width: 0 }} animate={{ width: "100%", transition: { duration: 0.5 } }} exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}>
       <img src="logo-blue.svg" alt="" />
       <p>Ainda não tem cadastro? <br /> Então, antes de buscar seu melhor amigo, precisamos de alguns dados:</p>
       <form onSubmit={handleSubmit(onSubmit)}>
