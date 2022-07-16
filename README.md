@@ -1,8 +1,8 @@
 _For the English version of this README, click [here](#English)._
 
-# AdoPet
-
 <div align='center'>
+
+![](/public/logo-blue.svg)
 
 <!--
   <figure>
