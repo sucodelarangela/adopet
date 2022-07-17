@@ -547,6 +547,7 @@ a.card__contact:focus::before {
   background: var(--light-grey);
   padding: 2rem 1rem;
   border-radius: 0.625rem;
+  margin-bottom: 1rem;
 }
 
 .message input,
