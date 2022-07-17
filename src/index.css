@@ -126,14 +126,11 @@ ul {
 
 .header nav > div {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
   gap: 3.75rem;
 }
 
 .header__logo {
   display: none;
-  width: 8rem;
 }
 
 .header__home,
@@ -166,7 +163,7 @@ ul {
 /* #region ----------------- BUTTON COMPONENT */
 button,
 .button {
-  width: 54vw;
+  width: 50vw;
   background: var(--coral);
   padding: 0.5rem;
   font-weight: 600;
@@ -252,6 +249,12 @@ button:focus,
   gap: 1rem;
   margin-left: 5rem;
   margin-right: 5rem;
+}
+
+.home__buttons div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .initial .button {
@@ -638,6 +641,10 @@ legend {
 
   .home__buttons {
     padding: 2.375rem;
+  }
+
+  .home__buttons div {
+    display: inline;
   }
 
   .initial::after,

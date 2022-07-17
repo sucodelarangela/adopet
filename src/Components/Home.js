@@ -9,7 +9,7 @@ import CardPet from './CardPet.js';
 
 const Home = () => {
   return (
-    <motion.section className='home' initial={{ width: 0 }} animate={{ width: "100%", transition: { duration: 0.5 } }} exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}>
+    <motion.section className='home' initial={{ width: 0 }} animate={{ width: "auto", transition: { duration: 0.5 } }} exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}>
       <p>Olá! <br /> Veja os amigos disponíveis para adoção!</p>
       <div className='cards'>
         {

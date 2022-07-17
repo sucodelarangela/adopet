@@ -10,7 +10,7 @@ const Home = () => {
   const matches = useMediaQuery('(max-width: 767px)');
 
   return (
-    <motion.section className='initial' initial={{ width: 0 }} animate={{ width: "100%", transition: { duration: 0.5 } }} exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}>
+    <motion.section className='initial' initial={{ width: 0 }} animate={{ width: "auto", transition: { duration: 0.5 } }} exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}>
       <Helmet>
         <style>{"body { background-color: #3874ff; }"}</style>
       </Helmet>
