@@ -5,8 +5,11 @@ import Button from "./Button";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const RegisterForm = () => {
+  const navigate = useNavigate();
+
   // destructuring useForm
   const { register, handleSubmit, watch, formState: { errors } } = useForm({
     mode: 'onBlur',
@@ -28,6 +31,7 @@ const RegisterForm = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    navigate('/login');
   };
 
   return (
