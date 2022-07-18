@@ -302,7 +302,8 @@ button:focus,
 /* #endregion */
 
 /* #region ----------------- FORMS COMPONENT */
-.register .error {
+.register .error,
+.message .error {
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--coral);
