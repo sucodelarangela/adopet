@@ -13,7 +13,7 @@ const AnimatedRoutes = () => {
   const location = useLocation();
 
   return (
-    <AnimatePresence>
+    <AnimatePresence exitBeforeEnter>
       <Routes location={location} key={location.pathname}>
         <Route exact path='/' element={<Initial />} />
         <Route path='/login' element={<LoginForm />} />
