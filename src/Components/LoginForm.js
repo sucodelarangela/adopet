@@ -36,7 +36,7 @@ const LoginForm = () => {
 		}
 	};
 
-	useEffect(() => {}, [element]);
+	useEffect(() => { }, [element]);
 
 	return (
 		<motion.section
@@ -92,6 +92,8 @@ const LoginForm = () => {
 					Esqueci minha senha
 				</a>
 				<Button type="submit" children="Entrar" />
+				<p>Ainda não tem conta?</p>
+				<a href="/cadastro" className="register__newUser">Faça seu cadastro</a>
 			</form>
 		</motion.section>
 	);

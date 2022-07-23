@@ -425,6 +425,7 @@ button:focus,
 }
 
 .register__forgot,
+.register__newUser,
 .message a {
     color: var(--coral);
     text-align: center;
