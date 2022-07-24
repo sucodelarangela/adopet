@@ -33,19 +33,18 @@ _For the English version of this README, click [here](#English)._
 
 Olá, devs!
 
-Neste repositório você encontrará uma página de uma empresa fictícia chamada **AdoPet**, que funciona como intermediária entre adotantes de pets e ONGs com foco em retirar animais das ruas. A proposta da AdoPet é trazer mais usuários e aumentar a interação entre possíveis adotantes e representantes dessas ONGs e para isso, o objetivo do projeto é implementar uma plataforma e levar a empresa pro mundo digital. Para isso, o site deve conter os seguintes requisitos:
-
-- Uma página inicial que será de login, contendo os botões de "já tenho conta" e "quero me cadastrar".
-  > Página alterada após feedbacks de usuários: agora ela mostra um botão Ver Pets Disponíveis para Adoção, visto que os feedbacks sugerem que o foco da AdoPet são os animais e o acesso às suas informações é o que faz os usuários quererem se cadastrar.
-- Uma página de cadastro que terá um formulário solicitando as informações: nome, e-mail e senha.
-- Uma página de login com um formulário de e-mail e senha.
-- Uma página que deve aparecer após o login com uma lista de cachorros e gatos. Cada animal deve mostrar foto, nome, idade, porte, características e região. Para cada animal haverá um botão de contato.
-  > Como já mencionado, a página agora pode ser visualizada sem a necessidade de login, permitindo que os usuários se apaixonem pelos pets primeiramente, o que seria uma forma melhor de atrair novos cadastros.
-- Uma página de edição de envio de mensagem, com um formulário com campos de nome, telefone, nome do animal e mensagem.
-- Permitir a edição do perfil, onde também será possível incluir foto do usuário.
-- O site seja responsivo para dar aos clientes a facilidade de comprar através de dispositivos mobiles.
+Neste repositório você encontrará uma página de uma empresa fictícia chamada **AdoPet**, que funciona como intermediária entre adotantes de pets e ONGs com foco em retirar animais das ruas. A proposta da AdoPet é trazer mais usuários e aumentar a interação entre possíveis adotantes e representantes dessas ONGs e para isso, o objetivo do projeto é implementar uma plataforma e levar a empresa pro mundo digital.
 
 Este projeto está sendo desenvolvido como resultado de um Desafio Front-End (4ª edição) exclusivo para alunos da escola de tecnologia [Alura](https://www.alura.com.br).
+
+## ⚙️ Como usar
+
+-   Acesse o site: https://adopet-tau.vercel.app/
+-   Para fazer o login na página, utilize os seguintes dados:
+
+    > E-mail: admin@email.com
+    >
+    > Senha: 12345aA
 
 ## 🦾 Sobre o desafio
 
@@ -57,50 +56,12 @@ O Desafio dura 4 semanas. Todas as segundas-feiras durante 3 semanas receberemos
 
 O Desafio começou em 04 de julho de 2022.
 
-<!--
-
-## ⚙️ Como usar
-
-Você pode testar a página clicando na imagem no topo deste README, porém, por se tratar de uma página _serverless_, algumas funções podem não estar disponíveis (como, por exemplo, inserir ou editar um produto do banco de dados). No entanto, a navegação pelo site é totalmente viável.
-
-Para experimentar a aplicação em sua totalidade, você pode roda-lo localmente. Para isso, siga as etapas a seguir:
-
-1. Faça o download deste repositório através do botão verde **Code** no topo da página e, em seguida, clicando em **Download ZIP**. Ou, se preferir, através do terminal (Git Bash, Powershell, etc.), use o comando:
-
-```
-git clone https://github.com/sucodelarangela/alura-geek.git
-```
-
-2. Acesse a pasta do projeto com seu terminal;
-
-3. Rode o comando `npm install` para instalar as dependências;
-
-4. Para iniciar a aplicação, rode o comando `npm start` no terminal. Você deve receber a seguinte mensagem de confirmação:
-
-```
-npm start
-
-> alura-geek@1.0.0 start
-> node .
-
-APP RUNNING ON PORT 3000
-```
-
-5. Para usar a aplicação, abra o seu browser preferido e acesse o endereço `http://localhost:3000/`
-
-6. Para fazer o login de administrador na página, utilize os seguintes dados:
-
-```
-E-mail: admin@email.com
-Senha: 12345aZ
-```
-
--->
-
 ## 📈 Etapas do projeto
 
-- **Semana 1:** Desenvolvimento das estruturas e estilizações com layout responsivo em metodologia _mobile-first_. No meu caso, escolhi desenvolver com React, foco atual dos meus estudos.
-- **Semana 2:** Validação dos formulário, animação na transição de páginas, adequações de layout e rotas após feedback de uso da aplicação.
+-   **Semana 1:** Desenvolvimento das estruturas e estilizações com layout responsivo em metodologia _mobile-first_. No meu caso, escolhi desenvolver com React, foco atual dos meus estudos.
+-   **Semana 2:** Validação dos formulários, animação na transição de páginas, adequações de layout e rotas após feedback de uso da aplicação.
+-   **Semana 3 (em andamento):** Funcionalidade de login/logout com armazenamento local (`localStorage`) e definição de rotas protegidas.
+-   **Semana 4 (a iniciar):** Funcionalidade de login/logout no back-end da aplicação.
 
 <!--
 
@@ -133,58 +94,18 @@ _English version_
 
 Hello, devs!
 
-In this repo you will find a website for a pseudo company called **AdoPet**, which acts as an intermediary between animal adopters and NGOs that focus on removing animals from the streets. The purpose of AdoPet is to attract users and increase interaction between adopters and representatives of these NGOs. Thus, the website must have the following features:
-
-- A home page with two buttons allowing users to log in or register to the website.
-  > Page altered due to users feedback: now it shows a button to See Pets Available for Adoption, as feedbacks taken suggested that AdoPet's center of attention are the pets and access to their information is what really makes users to register.
-- A registration form for new users with name, e-mail and password inputs.
-- A login form with e-mail and password inputs.
-- The pet page with their infos which must show after logging in. Each animal must show a photo, name, age, size, traits and location, plus a contact link.
-  > As mentioned on the first item, this page now shows without the need to log in first, allowing users to fall in love with the pets first, which would be a better way to attract new registered users.
-- A form for sending a message for the people responsible for the animal, with fields for name, phone, name of the animal and the message itself.
-- It must allow the user to edit its profile, changing information and user photo.
-- The page must be responsive to all kinds of devices.
+In this repo you will find a website for a pseudo company called **AdoPet**, which acts as an intermediary between animal adopters and NGOs that focus on removing animals from the streets. The purpose of AdoPet is to attract users and increase interaction between adopters and representatives of these NGOs.
 
 This project is currently in development as a result of a Front-End Challenge (4th edition) exclusively for students of [Alura](https://www.alura.com.br) tech school.
 
-<!--
+## ⚙️ How to Use It
 
-## ⚙️ How to use it
+-   Visit the website: https://adopet-tau.vercel.app/
+-   To log in the page, use the following data:
 
-You can test the page by clicking the image on the top of this README, but as it is a serverless deploy on Heroku, some functionalities may not work properly (i.e. inserting or editing a product in database). However, if you just want to browse the application, it is perfectly fine.
-
-For full access to the app functionalities, you can run it locally on your machine. In order to do so, follow the steps below:
-
-1. Download this repository by clicking the green **Code** button on top of the page and then clicking **Download ZIP** option. Or use the following command on your terminal (Git Bash, Powershell, etc.):
-
-```
-git clone https://github.com/sucodelarangela/alura-geek.git
-```
-
-2. Access the project root folder on your terminal;
-
-3. Run `npm install` to install all project dependencies;
-
-4. To start the application, run `npm start` on yout terminal. You should receive the following message:
-
-```
-npm start
-
-> alura-geek@1.0.0 start
-> node .
-
-APP RUNNING ON PORT 3000
-```
-
-5. To use the app, open your favorite browser and go to the URL `http://localhost:3000/`
-
-6. To log in as admin, use the following data:
-
-```
-E-mail: admin@email.com
-Password: 12345aZ
-```
--->
+    > E-mail: admin@email.com
+    >
+    > Password: 12345aA
 
 ## 🦾 About the challenge
 
@@ -198,9 +119,10 @@ The Challenge started at July 4th, 2022.
 
 ## 📈 Project stages
 
-- **Week 1:** Development of structure and styles with responsive layout developed with _mobile-first_ methodology. In my case, I have chosen to develop the page using React with JavaScript.
-
-- **Week 2:** Form validation with _react-hook-form_, animated page transition with _framer-motion_ library and layout changes due to user feedbacks.
+-   **Week 1:** Development of structure and styles with responsive layout developed with _mobile-first_ methodology. In my case, I have chosen to develop the page using React with JavaScript.
+-   **Week 2:** Form validation with _react-hook-form_, animated page transition with _framer-motion_ library and layout changes due to user feedbacks.
+-   **Week 3 (in progress):** Login/logout with `localStorage` and protection of private routes.
+-   **Week 4:** Login/logout on back-end.
 
 <!--
 
