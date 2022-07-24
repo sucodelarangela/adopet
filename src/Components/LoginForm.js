@@ -1,14 +1,20 @@
 // dependencies
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
 // components
 import Button from "./Button.js";
 
+// contexts
+import { AuthContext } from "../contexts/auth.js";
+
 const LoginForm = () => {
 	const navigate = useNavigate();
+
+	// destructuring AuthContext
+	const { authenticated, login } = useContext(AuthContext);
 
 	// destructuring useForm
 	const {
@@ -21,8 +27,9 @@ const LoginForm = () => {
 	});
 
 	const onSubmit = (data) => {
-		console.log(data);
-		navigate("/home");
+		console.log('submit', data);
+		login(data.email, data.password);
+		// navigate("/home");
 	};
 
 	let element = "";
