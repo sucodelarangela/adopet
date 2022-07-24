@@ -1,6 +1,10 @@
 // dependencies
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation, Navigate } from "react-router-dom";
 import { AnimatePresence } from 'framer-motion';
+import { useContext } from "react";
+
+// contexts
+import { AuthProvider, AuthContext } from "../contexts/auth";
 
 // components
 import Initial from './Initial';
@@ -12,16 +16,35 @@ import RegisterForm from "./RegisterForm.js";
 const AnimatedRoutes = () => {
   const location = useLocation();
 
+  // Creating a Private element to hold the pages we want to protect with login
+  const Private = ({ children }) => {
+    const { authenticated, loading } = useContext(AuthContext);
+
+    // if the localStorage fetch is still happening, then we show a message. When it finishes (loading false), then the page is rendered
+    if (loading) {
+      return <div className="loading">Carregando...</div>;
+    }
+
+    // if user is not authenticated, all private pages will redirect to login page
+    if (!authenticated) {
+      return <Navigate to='/login' />;
+    }
+
+    return children;
+  };
+
   return (
     <AnimatePresence exitBeforeEnter>
-      <Routes location={location} key={location.pathname}>
-        <Route exact path='/' element={<Initial />} />
-        <Route path='/login' element={<LoginForm />} />
-        <Route path='/cadastro' element={<RegisterForm />} />
-        <Route path='/home' element={<Home />} />
-        <Route path='/mensagem' element={<Message />} />
-        <Route path='/perfil' element={<Message />} />
-      </Routes>
+      <AuthProvider>
+        <Routes location={location} key={location.pathname}>
+          <Route exact path='/' element={<Initial />} />
+          <Route path='/login' element={<LoginForm />} />
+          <Route path='/cadastro' element={<RegisterForm />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/mensagem' element={<Private><Message /></Private>} />
+          <Route path='/perfil' element={<Private><Message /></Private>} />
+        </Routes>
+      </AuthProvider>
     </AnimatePresence>
   );
 };

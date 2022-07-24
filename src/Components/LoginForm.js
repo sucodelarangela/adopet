@@ -1,14 +1,20 @@
 // dependencies
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
 // components
 import Button from "./Button.js";
 
+// contexts
+import { AuthContext } from "../contexts/auth.js";
+
 const LoginForm = () => {
 	const navigate = useNavigate();
+
+	// destructuring AuthContext
+	const { authenticated, login } = useContext(AuthContext);
 
 	// destructuring useForm
 	const {
@@ -21,8 +27,9 @@ const LoginForm = () => {
 	});
 
 	const onSubmit = (data) => {
-		console.log(data);
-		navigate("/home");
+		console.log('submit', data);
+		login(data.email, data.password);
+		// navigate("/home");
 	};
 
 	let element = "";
@@ -36,7 +43,7 @@ const LoginForm = () => {
 		}
 	};
 
-	useEffect(() => {}, [element]);
+	useEffect(() => { }, [element]);
 
 	return (
 		<motion.section
@@ -92,6 +99,8 @@ const LoginForm = () => {
 					Esqueci minha senha
 				</a>
 				<Button type="submit" children="Entrar" />
+				<p>Ainda não tem conta?</p>
+				<a href="/cadastro" className="register__newUser">Faça seu cadastro</a>
 			</form>
 		</motion.section>
 	);
