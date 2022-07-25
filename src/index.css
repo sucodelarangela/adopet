@@ -165,6 +165,32 @@ ul {
 .header__message:focus {
     background: url('./assets/messages-hover.svg') no-repeat center;
 }
+
+button.menu__button {
+    background: transparent;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    transition: 0.3s;
+}
+
+button.menu__button:hover,
+button.menu__button:focus {
+    transform: scale(1.1);
+    background: transparent;
+    box-shadow: none;
+}
+
+.header > nav > .menu__content {
+    position: absolute;
+    right: 3rem;
+    top: 7rem;
+    flex-direction: column;
+    gap: 0;
+}
+
 /* #endregion */
 
 /* #region ----------------- BUTTON COMPONENT */
@@ -740,6 +766,10 @@ legend {
 
     .header__user {
         width: 3.5rem;
+    }
+
+    .header > nav > .menu__content {
+        right: 10.125rem;
     }
     /*
 

@@ -1,24 +1,53 @@
 // dependencies
-import { useEffect, useState } from 'react';
+import { useCallback, useContext, useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Menu } from '@headlessui/react';
 
 // assets
 import userPic from '../assets/user.svg';
 import loggedUser from '../assets/logged-user.png';
+import Button from './Button';
+
+// contexts
+import { AuthContext } from '../contexts/auth';
 
 const Header = () => {
   const location = useLocation();
   const [user, setUser] = useState('');
+  const { logout } = useContext(AuthContext);
+
+  const handleLogout = useCallback(() => {
+    logout();
+  }, [logout]);
 
   useEffect(() => {
     if (location.pathname === '/' || location.pathname === '/login' || location.pathname === '/cadastro') {
       setUser('');
     } else if (location.pathname === '/perfil') {
-      setUser(<img className='header__user' src={loggedUser} alt="Usuário" />);
+      setUser(
+        <Menu>
+          <Menu.Button className="menu__button">
+            <img className='header__user' src={loggedUser} alt="Usuário" />
+          </Menu.Button>
+          <Menu.Items className='menu__content'>
+            <Button handleClick={handleLogout} children="Logout"></Button>
+          </Menu.Items>
+        </Menu>
+      );
     } else {
-      setUser(<Link to='/perfil'><img className='header__user' src={userPic} alt="Usuário" /></Link>);
+      setUser(
+        <Menu>
+          <Menu.Button className="menu__button">
+            <img className='header__user' src={userPic} alt="Usuário" />
+          </Menu.Button>
+          <Menu.Items className='menu__content'>
+            <a className='button' href="/perfil">Ver Perfil</a>
+            <Button onClick={handleLogout} children="Logout"></Button>
+          </Menu.Items>
+        </Menu>
+      );
     }
-  }, [location]);
+  }, [location, handleLogout]);
 
   return (
     <header className='header'>
