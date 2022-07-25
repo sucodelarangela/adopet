@@ -12,6 +12,8 @@ import LoginForm from "./LoginForm.js";
 import Home from "./Home.js";
 import Message from "./Message.js";
 import RegisterForm from "./RegisterForm.js";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -36,6 +38,7 @@ const AnimatedRoutes = () => {
   return (
     <AnimatePresence exitBeforeEnter>
       <AuthProvider>
+        <Header />
         <Routes location={location} key={location.pathname}>
           <Route exact path='/' element={<Initial />} />
           <Route path='/login' element={<LoginForm />} />
@@ -44,6 +47,7 @@ const AnimatedRoutes = () => {
           <Route path='/mensagem' element={<Private><Message /></Private>} />
           <Route path='/perfil' element={<Private><Message /></Private>} />
         </Routes>
+        <Footer />
       </AuthProvider>
     </AnimatePresence>
   );
