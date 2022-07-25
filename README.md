@@ -25,8 +25,9 @@ _For the English version of this README, click [here](#English)._
   <a href="https://github.com/codermarcos/simple-mask-money"><img src="https://img.shields.io/badge/SimpleMaskMoney-222222?style=for-the-badge" /></a>
   <img src="https://img.shields.io/badge/SQLite3-07405E?style=for-the-badge&logo=sqlite&logoColor=white" />  -->
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-  <a href='https://react-hook-form.com/' target='_blank'><img src="https://img.shields.io/badge/React Hook Form-EC5990?style=for-the-badge"/></a>
-  <a href='https://www.framer.com/motion/' target='_blank'><img src="https://img.shields.io/badge/Framer Motion-61B?style=for-the-badge"/></a>
+  <a href='https://react-hook-form.com/' target='_blank'><img src="https://img.shields.io/badge/React Hook Form-EC5990?style=for-the-badge&logo=reacthookform&logoColor=white"/></a>
+  <a href='https://www.framer.com/motion/' target='_blank'><img src="https://img.shields.io/badge/Framer Motion-61B?style=for-the-badge&logo=framer&logoColor=white"/></a>
+  <a href='https://headlessui.com/react/menu' target='_blank'><img src="https://img.shields.io/badge/Headless UI-66E3FF?style=for-the-badge&logo=headlessui&logoColor=black"/></a>
 </div>
 
 ## 🔎 Visão geral
