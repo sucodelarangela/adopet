@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useContext } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
 
 // components
 import Button from "./Button.js";
@@ -11,10 +10,8 @@ import Button from "./Button.js";
 import { AuthContext } from "../contexts/auth.js";
 
 const LoginForm = () => {
-	const navigate = useNavigate();
-
 	// destructuring AuthContext
-	const { authenticated, login } = useContext(AuthContext);
+	const { login } = useContext(AuthContext);
 
 	// destructuring useForm
 	const {
@@ -62,7 +59,7 @@ const LoginForm = () => {
 					{...register("email", {
 						required: "É necessário informar um endereço de email",
 						pattern:
-							/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+							/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
 					})}
 					placeholder="Insira seu email"
 				/>

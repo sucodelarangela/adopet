@@ -12,7 +12,7 @@ import loggedUser from '../assets/logged-user.png';
 const Message = () => {
   const location = useLocation();
   // destructuring useForm
-  const { register, handleSubmit, watch, formState: { errors } } = useForm({
+  const { register, handleSubmit, formState: { errors } } = useForm({
     mode: 'onBlur',
     reValidateMode: 'onChange'
   });

@@ -14,7 +14,7 @@ import { AuthContext } from '../contexts/auth';
 const Header = () => {
   const location = useLocation();
   const [user, setUser] = useState('');
-  const { logout } = useContext(AuthContext);
+  const { authenticated, logout } = useContext(AuthContext);
 
   const handleLogout = useCallback(() => {
     logout();
@@ -23,13 +23,14 @@ const Header = () => {
   useEffect(() => {
     if (location.pathname === '/' || location.pathname === '/login' || location.pathname === '/cadastro') {
       setUser('');
-    } else if (location.pathname === '/perfil') {
+    } else if (authenticated) {
       setUser(
         <Menu>
           <Menu.Button className="menu__button">
             <img className='header__user' src={loggedUser} alt="Usuário" />
           </Menu.Button>
           <Menu.Items className='menu__content'>
+            <a className='button' href="/perfil">Ver Perfil</a>
             <Button handleClick={handleLogout} children="Logout"></Button>
           </Menu.Items>
         </Menu>
@@ -41,13 +42,12 @@ const Header = () => {
             <img className='header__user' src={userPic} alt="Usuário" />
           </Menu.Button>
           <Menu.Items className='menu__content'>
-            <a className='button' href="/perfil">Ver Perfil</a>
-            <Button onClick={handleLogout} children="Logout"></Button>
+            <a className='button' href="/login">Login</a>
           </Menu.Items>
         </Menu>
       );
     }
-  }, [location, handleLogout]);
+  }, [location, handleLogout, authenticated]);
 
   return (
     <header className='header'>
