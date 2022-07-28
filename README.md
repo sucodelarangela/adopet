@@ -61,8 +61,7 @@ O Desafio começou em 04 de julho de 2022.
 
 -   **Semana 1:** Desenvolvimento das estruturas e estilizações com layout responsivo em metodologia _mobile-first_. No meu caso, escolhi desenvolver com React, foco atual dos meus estudos.
 -   **Semana 2:** Validação dos formulários, animação na transição de páginas, adequações de layout e rotas após feedback de uso da aplicação.
--   **Semana 3 (em andamento):** Funcionalidade de login/logout com armazenamento local (`localStorage`) e definição de rotas protegidas.
--   **Semana 4 (a iniciar):** Funcionalidade de login/logout no back-end da aplicação.
+-   **Semana 3:** Funcionalidade de login/logout com armazenamento local (`localStorage`) e definição de rotas protegidas.
 
 <!--
 
@@ -122,8 +121,7 @@ The Challenge started at July 4th, 2022.
 
 -   **Week 1:** Development of structure and styles with responsive layout developed with _mobile-first_ methodology. In my case, I have chosen to develop the page using React with JavaScript.
 -   **Week 2:** Form validation with _react-hook-form_, animated page transition with _framer-motion_ library and layout changes due to user feedbacks.
--   **Week 3 (in progress):** Login/logout with `localStorage` and protection of private routes.
--   **Week 4:** Login/logout on back-end.
+-   **Week 3:** Login/logout with `localStorage` and protection of private routes.
 
 <!--
 
