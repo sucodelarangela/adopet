@@ -57,7 +57,7 @@ O Desafio dura 4 semanas. Todas as segundas-feiras durante 3 semanas receberemos
 
 O Desafio começou em 04 de julho de 2022.
 
-## 📈 Etapas do projeto
+### 📈 Etapas do projeto
 
 -   **Semana 1:** Desenvolvimento das estruturas e estilizações com layout responsivo em metodologia _mobile-first_. No meu caso, escolhi desenvolver com React, foco atual dos meus estudos.
 -   **Semana 2:** Validação dos formulários, animação na transição de páginas, adequações de layout e rotas após feedback de uso da aplicação.
