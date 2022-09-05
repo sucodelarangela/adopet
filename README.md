@@ -14,10 +14,10 @@ Este projeto foi desenvolvido como resultado de um Desafio Front-End (4ª ediç�
 
 Você pode saber um pouco mais como funcionam os _challenges_ da Alura visitando a seção [**🦾 Sobre o desafio**](#challenge).
 
-| 🪧 Vitrine.Dev |                                                                                                                |
-| -------------- | -------------------------------------------------------------------------------------------------------------- |
-| ✨ Nome        | **Adopet**                                                                                                     |
-| 🏷️ Tecnologias | React, CSS, JavaScript, React Hook Form, Framer Motion, Headless-ui                                            |
+| 🪧 Vitrine.Dev  |     |
+| -------------- | --- |
+| ✨ Nome        | **Adopet** - Challenge Alura |
+| 🏷️ Tecnologias | React, CSS, JavaScript, React Hook Form, Framer Motion, Headless-ui |
 | 🚀 URL         | [**Acesse o site**](https://adopet-tau.vercel.app/). Veja os dados de login no item [**⚙️ Como usar**](#howto) |
 | 🔥 Desafio     | [**Protótipo do Figma**](https://www.figma.com/file/TlfkDoIu8uyjZNla1T8TpH/Challenge---Adopet)                 |
 
