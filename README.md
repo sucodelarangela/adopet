@@ -17,7 +17,7 @@ Você pode saber um pouco mais como funcionam os _challenges_ da Alura visitando
 | 🪧 Vitrine.Dev  |     |
 | -------------- | --- |
 | ✨ Nome        | **Adopet** - Challenge Alura |
-| 🏷️ Tecnologias | React, CSS, JavaScript, React Hook Form, Framer Motion, Headless-ui |
+| 🏷️ Tecnologias | React, Headless-ui, React Hook Form, Framer Motion, CSS, JavaScript |
 | 🚀 URL         | [**Acesse o site**](https://adopet-tau.vercel.app/). Veja os dados de login no item [**⚙️ Como usar**](#howto) |
 | 🔥 Desafio     | [**Protótipo do Figma**](https://www.figma.com/file/TlfkDoIu8uyjZNla1T8TpH/Challenge---Adopet)                 |
 
